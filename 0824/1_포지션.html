@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>포지션</title>
+    <style>
+        body {
+            /*스크롤이 생기게 된다.*/
+            height: 10000px;
+        }
+        #box {
+            width: 600px;
+            height: 400px;
+            background-color: #2196F3;
+            /*브라우저 기준 고정*/
+            position:   fixed;
+            /*브라우저를 기준으로 수평수직 가운데 정렬*/
+            left: 50%;
+            top: 50%;
+            border:30px solid deeppink;
+            /*border+width/border+height*/
+            margin-left: -330px;
+            margin-top: -230px;
+
+            /*
+                top, right, bottom, left 속성이 있음(시계 방향)
+                위의 4가지속성이 작동되기 위해서는
+                position 값을 static이 아닌 값으로 지정해야 함
+                (기본값: static 이어서 안움직인다.)
+                position의 값
+                -fixed  : 브라우저(윈도우) 기준(스크롤을 내려도 철썩 붙어있다.)
+                -absolute  : 포지션닝 컨텍스트 기준
+                             (가장 가까운 조상중에 포지션이, relative, absolute, fixed인 요소   )
+                -relative   :
+            */
+        }
+        #ang {
+            position: absolute;
+            left:250px;
+            top:100px;
+          }
+        #nc {
+            position: fixed;
+            left: 250px;
+            top:100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"><img src="img/ang.jpg" id="ang" width="100"/><img src="img/dinos.png" id="nc" width="25"/></div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>IR &amp; IS 기법</title>
+    <style>
+        #logo {
+            /*너비*/
+            width: 450px;
+            /*높이*/
+            height: 108px;
+            /*뒷배경색*/
+            /*background-color: gray;*/
+            /*뒷배경이미지*/
+            background-image: url(img/sp_main_b46ce0.png);
+            /*뒷배경반복에대한 속성*/
+            background-repeat: no-repeat;
+            /**/
+            background-position: 0 -316px;
+        }
+        #creator {
+            width: 196px;
+            height: 75px;
+            /*background-color: aqua;*/
+            background-image: url(img/sp_main_b46ce0.png);
+            background-repeat: no-repeat;
+            background-position: -550px -332px;
+        }
+    /*
+        IS기법(Image Sprite)
+        - 하나의 이미지에 여러 이미지를 모아놓고
+          포지션으로 각각의 이미지를 표현하는 기 법
+          장점: 서버 부하 줄인다
+
+         IR기법: (Image replacement)
+         - 글자를 이미지로 대체하는 기법
+           장점: 글자가 HTML에 존재하니까
+                 웹접근성, 검색엔진최적화(SEO)가 좋고
+                 하지만 글자보다 이미지가 더 멋지고 아름답고 수려하니까
+                 이미지로 꾸미는 기법
+
+          웹스톰 이름바꾸기 shift + F6
+    */
+        #dark {
+            width: 262px;
+            height: 92px;
+            /*background-color: yellow;*/
+            background-image: url(img/sp_main_b46ce0.png);
+            background-repeat: no-repeat;
+            background-position:  -544px -224px;
+        }
+
+        .ir {
+            /*글자 들여쓰기 */
+            text-indent: -9999px;
+            /*부모요소에서 벗어난 자식을 숨긴다*/
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="logo" class="ir">네이버</h1>
+    <div id="creator" class="ir">추천 크리에이터</div>
+    <div id="dark" class="ir">다크모드로 보기</div>
+</body>
+</html>

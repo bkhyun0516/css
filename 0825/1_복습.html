@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>BMJ | 밴드</title>
+    <link rel="icon" href="https://ssl.pstatic.net/cmstatic/webclient/icon/20200615184036/favicon.ico"/>
+    <style>
+        body {
+            /*
+                body,h1 같은요소는 기본적으로 브라우저의 css를 가지고 있다.
+                필요시 고려해줘야한다. 통째로 지우던가 바꾸던가
+            */
+            margin: 0px;/*브라우저기본CSS값은 8px*/
+            background-image: url(img/band_bg.jpg);
+            /*
+                background-position: 백그라운드 위치 지정
+                 파라미터 4개시: top right bottom left
+                 파라미터 2개시: x축 y축
+            */
+            background-position: center 0;
+            height: 4274px;
+            background-repeat: no-repeat;
+        }
+        #layerWrap {
+        /*    브라우저 기준 */
+            position: fixed;
+        /*    position: absolute;*/
+            width: 100%;
+            height: 100%;
+        /*    백그라운드 색*/
+            background-color: rgba(0,0,0,.75);
+        /*    background-image: url(img/popup.png);*/
+        /*!*    컬러와 이미지가 겹치면 이미지가 위로 간다!*!*/
+        /*    background-repeat: no-repeat;*/
+        /*    background-position: center;*/
+        }
+        #popup {
+            background-image: url(img/popup.png);
+            width: 600px;
+            height: 483px;
+            /*position: absolute;*/
+            /*    -> 이부분에서는 fixed나 absolute나 효과가 똑같다.*!*/
+            /*
+                 absolute:
+                    포지셔닝 컨텍스트 기준
+                    (포지셔닝 컨텍스트는 가장 가까운 조상중에 position이
+                        relative, fixed, absolute 인 요소 )
+            */
+            position: fixed;
+            left:50%;
+            top:50%;
+            margin: -241.5px 0 0 -300px;
+       }
+        #closeBtn {
+            width:15px;
+            height: 15px;
+            background-image: url(img/spr_icons.png);
+            background-position: -98px -568px;
+            /*브라우저 기본 CSS */
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+
+            /*ir기법*/
+            text-indent: -9999px;
+            overflow: hidden;
+            /*포지션 지정*/
+            position: absolute;
+            right: 20px;
+            top:21px;
+
+            /*display: none;*/
+        }
+    </style>
+</head>
+<body>
+    <div id="layerWrap">
+        <div id="popup">
+            <button id="closeBtn">닫기</button>
+        </div><!--//popup -->
+    </div><!--//layerWrap -->
+</body>
+</html>

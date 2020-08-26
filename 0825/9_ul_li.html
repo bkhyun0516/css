@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>ul &amp; li 요소</title>
+    <style>
+        body {
+            margin:0;
+        }
+        ul {
+            width: 200px;
+            background-color: red;
+        /*
+            브라우저가 가진 CSS:
+                - margin-top,bottom
+                - padding-left;
+                - list-style
+        */
+            margin:0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            line-height: 100px;
+        }
+        li{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            margin:0;
+        }
+        /*1번째 자식인 li*/
+        li:nth-child(1){
+            background-color: orange;
+        }
+        /*2번째 자식인 li*/
+        li:nth-child(2){
+            background-color: green;
+        }
+        li:nth-child(3){
+            background-color: gray;
+        }
+        li:nth-child(4){
+            background-color: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>리스트1</li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+        <li>리스트4</li>
+    </ul>
+</body>
+</html>

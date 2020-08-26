@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>박스그림자 &amp; 글자 그림자</title>
+    <!--    font awesome-->
+    <link href="css/notosanskr.css" rel="stylesheet"/>
+    <!--   Noto Sans KR 폰트-->
+    <link href="css/all.min.css" rel="stylesheet" />
+    <style>
+        #box {
+            /*브라우저 기준 가운데 정렬*/
+            position: fixed;
+            left:50%;
+            top:50%;
+            margin-left:-200px;
+            margin-top:-50px;
+
+            font-family: "Noto Sans KR", sans-serif;
+            font-size: 40px;
+            width:400px;
+            height:100px;
+            background-color: #0f4c82;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            font-weight: 900;
+
+            /*
+                글자 그림자
+                x축 y축  blur 색상
+            */
+            /*글자 같은색 네온싸인*/
+            text-shadow: 0px 0px 30px #fff;
+            /*기본적인 글자 그림자*/
+            /*text-shadow: 2px 2px 2px #424242;*/
+
+
+            /*text-shadow: 10px 10px 10px red,*/
+            /*            -10px 10px 10px blue,*/
+            /*             10px -10px 10px green,*/
+            /*            -10px -10px 10px yellow;*/
+            /*
+                박스 그림자
+                x축 y축  blur 색상
+            */
+            /*box-shadow: 100px 100px 10px red,*/
+            /*            -100px 100px 10px blue;*/
+        }
+        /*
+            가상클래스: hover(떠있는..): 마우스를 올렸을 때 !
+         */
+        #box:hover {
+            /*background-color: red;*/
+            /*마우스 올렸을 때 뜨는 느낌이 나게 된다.*/
+            box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            /*
+                ease 는 변화 속도 변화 나타낸다-> 가속도 함수명
+            */
+            transition: .2s ease;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="box">Cafe EDIYA<i class="fas fa-coffee"></i></div>
+</body>
+</html>

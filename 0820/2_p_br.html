@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>p_br</title>
+<!--
+    css를 적용시키려면 style 요소안에 작성
+    h1 요소선택자 다음엔 { CSS속성 작성 }
+-->
+    <style>
+    /*CSS주석*/
+        h1 {
+            /*글자색*/
+            color: gold;
+            /*뒷배경색*/
+            background: silver;
+        }
+        div {
+            /*pre요소와 같다*/
+            white-space: pre;
+            size: auto;
+            color: brown;
+            background-size: cover ;
+            background: beige;
+        }
+        span {
+            /*
+            빈글자를 쓰는 것이 아닌 CSS로 공간을 띄우는것
+            margin: 요소와 요소사이의 간격을 띄우는 속성
+            */
+            margin-right: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>마리아</h1>
+    <h2>스트롱 화사</h2>
+    <p>
+        욕을 하도&nbsp;&nbsp;먹어 체했어 하도<br />
+        <span>서러워도</span> 어쩌겠어 I do<br />
+        모두들 미워하느라 애썼네<br />
+        날 무너뜨리면<br />
+        밥이 되나<br />
+    </p>
+    <p>
+        외로워서 어떡해<br />
+        미움마저 삼켰어<br />
+        화낼 힘도 없어<br />
+        여유도 없고<br />
+        뭐 그리 아니꼬와~ 듀리쮸와~<br />
+        가던 길 그냥 가<br />
+        왜들 그래 서럽게<br />
+    </p>
+    <p>
+        마리아 마리아<br />
+        널 위한 말이야<br />
+        빛나는 밤이야<br />
+        널 괴롭히지마<br />
+        오 마리아 널 위한 말이야<br />
+        뭐 하러 아등바등해<br />
+        이미 아름다운데<br />
+    </p>
+<pre>
+마리아 마리아
+널 위한 말이야
+빛나는 밤이야
+널 괴롭히지마
+오 마리아 널 위한 말이야
+뭐 하러 아등바등해
+이미 아름다운데
+</pre>
+<!--
+        pre요소는 웹표준에 맞지만 사용을 지양해야 한다
+        center,font는 아예 비표준
+-->
+    <div>
+        마리아 마리아
+        널 위한 말이야
+        빛나는 밤이야
+        널 괴롭히지마
+        오 마리아 널 위한 말이야
+        뭐 하러 아등바등해
+        이미 아름다운데
+    </div>
+<!--
+    개행태그!
+    p(paragraph)요소: 한문단을 나타내는 요소
+    br(break line)요소: 한 줄 아래로 ->사용 지양해라
+    pre(presentation) 요소: 작성된 문장 그대로 표현
+    div요소 : 구역
+    span요소 :
+        =>div, span은 의미가 없어 많이 쓴다.
+-->
+</body>
+</html>

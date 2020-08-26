@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS의 선택자 두둥!</title>
+    <link rel="icon" href="img/firefox.png"/>
+    <style>
+        /*
+            CSS의 선택자(selector)
+            - 요소 선택자: 요소명
+                -> 요소선택자 사용시 모든 같은이름의 태그가 다 적용된다
+                   CSS 충돌로 깨질수 있음으로 팀플시에는 사용하지 말자
+            - id선택자: '#'id속성값
+
+            - class선택자 : '.'class값
+
+            HTML요소의 class 속성의 특징은
+            한 페이지에 여러개 중복할 수 있고,
+            한 요소에 여러개 중첩할 수 있음
+
+            HTML요소의 id속성의 특징은 한 페이지에 단 한개의 명이 존재해야 함
+
+        */
+
+    #test1 {
+        color: red;
+    }
+    #test2 {
+        color: rgb(0,0,255);
+    }
+    #test3 {
+        color: green;
+    }
+    .box {
+        /*너비*/
+        width:200px;
+        /*높이*/
+        height:200px;
+        /*뒷배경 색*/
+        background: antiquewhite;
+        /*글자정렬*/
+        text-align: center;
+    }
+    .circle {
+        /*둥근보더(둥근경계선*/
+        border-radius: 50px;
+    }
+   </style>
+</head>
+<body>
+    <h1 id="test1" class="box circle">나는 h1</h1>
+    <h1 id="test2" class="box">나도 h1</h1>
+    <h1 id="test3" class="box">나역시 h1</h1>
+
+</body>
+</html>

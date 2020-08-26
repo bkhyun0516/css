@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>transform-origin</title>
+    <style>
+        body{
+            background-color: #0f4c82;
+            text-align: center;
+
+        }
+        img {
+            cursor: pointer;
+            /*
+                transform-origin속성
+                transform이 작동되는 시작점(기원)을
+                정하는 속성: 기본값은 50% 50%;
+            */
+            transform-origin: 50% 0;
+
+            transition: .5s ease;
+        }
+        #frame:active{
+            transform: rotateZ(-30deg);
+            /*transition: .5s ease;-> 누를 때만 적용된다.*/
+        }
+        #car{
+            transform-origin: 50% 100%;
+            transform:perspective(500px) rotateX(0deg);
+            /*기본값 꼭 설정*/
+        }
+        #car:active{
+            transform:perspective(500px) rotateX(50deg);
+        }
+    </style>
+</head>
+<body>
+    <img id="frame" src="img/frame.png"/>
+    <hr/>
+    <img id="car" src="img/dbs.jpg" width="400"/>
+</body>
+</html>

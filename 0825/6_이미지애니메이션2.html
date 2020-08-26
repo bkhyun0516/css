@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>이미지애니메이션 2</title>
+    <style>
+        #sign {
+            background-image: url(img/preload-tindercox.png);
+            height: 472px;
+            width: 472px;
+            animation: ani 2s infinite steps(60);
+            position: fixed;
+            left:50%;
+            top:50%;
+            margin: -236px 0 0 -236px;
+        }
+
+        @keyframes ani {
+            0% {background-position: 0 0}
+            100%{background-position: -28320px 0 }
+
+        }
+    </style>
+</head>
+<body>
+    <div id="sign"></div>
+</body>
+</html>

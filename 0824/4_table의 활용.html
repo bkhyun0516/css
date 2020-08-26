@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>table의 활용</title>
+</head>
+<body>
+    <h1>KBO의 팀순위</h1>
+<!--
+        테이블의 제목: caption 요소
+        의미에 맞게 코딩하려면
+        thead, tbody,tfoot
+        th: table headline의 줄임말(제목)
+        td: table data
+-->
+    <table border="1">
+        <caption>팀별 순위표</caption>
+        <thead>
+            <tr>
+                <th>순위</th>
+                <th>팀</th>
+                <th>승</th>
+                <th>패</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><img src="img/dinos.png"/>NC</td>
+                <td>50</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><img src="img/heros.png"/>키움</td>
+                <td>45</td>
+                <td>45</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><img src="img/twins.png"/>LG</td>
+                <td>43</td>
+                <td>47</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><img src="img/bears.png"/>두산</td>
+                <td>41</td>
+                <td>49</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+            <!--  colspan : 하나의 td가 n개의 공간차지-->
+                <td colspan="4">제공 : KBO</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>border의 활용</title>
+    <style>
+        #radius{
+            width: 400px;
+            height: 300px;
+            background-color: darkcyan;
+            border-radius: 5px 10px 20px 40px;
+            /*
+                1 2
+                        순서대로..(시계방향!)
+                4 3
+            */
+        }
+        #triangle{
+            width: 0;
+            height: 0;
+
+            /*border-top : 100px solid #F8BBD0;*/
+            /*border-right : 100px solid #BBDEFB;*/
+            /*border-bottom : 100px solid #F0F4C3;*/
+            /*border-left : 100px solid #FFFF8D;*/
+
+
+            /*border-top : 100px solid #F8BBD0;*/
+            border-right : 100px solid transparent;
+            border-bottom : 100px solid #8BC34A;
+            /*border-left : 100px solid #FFFF8D;*/
+
+            /*background-color: white;*/
+            /*
+                박스모델: width, height,
+                 border, padding, margin 합친 크기
+             */
+        }
+    </style>
+</head>
+<body>
+    <div id="radius"></div>
+    <hr/>
+    <div id="triangle"></div>
+</body>
+</html>
