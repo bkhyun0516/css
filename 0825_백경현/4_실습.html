@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>실습4</title>
+	<style>
+	/* box CSS 설정 */
+		#box {
+			/*크기*/
+			width: 360px;
+			height: 360px;
+			/*백그라운드 이미지*/
+			background-image: url(img/scappy.gif);
+			/*백그라운드 이미지 반복 X*/
+			background-repeat: no-repeat;
+			/*브라우저 가운데 위치 고정*/
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			margin-left: -180px;
+			margin-top: -180px;
+			/*박스 그림자 효과 설정*/
+			box-shadow: 0 0 10px 0 black;
+		}
+		/*ul CSS 설정*/
+		ul {
+			/*기본 CSS 설정 확인*/
+			margin: 0;
+			padding: 0;
+			/* 점 삭제 */
+			list-style: none;
+		}
+		/*li CSS설정*/
+		li {
+			/*포지셔닝 기준 설정 */
+			position: absolute;
+			/* 요소의 크기 너비 지정*/
+			width: 180px;
+			height: 180px;
+			/* 글자 수직 수평 가운데 정렬 */
+			text-align: center;
+			line-height: 180px;
+			/* 글자 색 & 크기 & 그림자 효과 지정*/
+			color:#fff;
+			font-size: 40px;
+			text-shadow: 2px 2px 2px black ;
+			/*원근법지정*/
+			transform :perspective(400px);
+			/*동작 효과 지정*/
+			transition : 1s ease;
+			/*더블클릭 선택옵션 해제*/
+			user-select: none;
+		}
+		/*li 첫 자식*/
+		li:nth-child(1){
+			/*색상설정*/
+			background-color: red;
+			/*위치 설정*/
+			margin: 0 0 0 0;
+			/*동작 기준점 설정*/
+			transform-origin: 90px 0;
+		}
+		/*눌렀을 때 동작*/
+		li:nth-child(1):active {
+			transform:perspective(400px) rotateX(-80deg);
+		}
+	/*li 둘째 자식*/
+		li:nth-child(2){
+			 background-color: green;
+			 margin:0 0 0 180px ;
+			 transform-origin: 180px 90px;
+		}
+		li:nth-child(2):active {
+			transform:perspective(400px) rotateY(-80deg);
+		}
+		/*li 셋째 자식*/
+		li:nth-child(3){
+			  background-color: dodgerblue;
+			  margin: 180px 0 0 0 ;
+			  transform-origin: 0px 90px;
+		}
+		li:nth-child(3):active {
+			transform:perspective(400px) rotateY(80deg);
+		}
+		/*li 4번째 자식*/
+		li:nth-child(4){
+			   background-color: yellow;
+			   margin: 180px 0 0 180px;
+			   transform-origin: 90px 180px;
+		}
+		li:nth-child(4):active {
+			transform :perspective(400px) rotateX(80deg);
+		}
+
+	</style>
+</head>
+<body>
+	<div id="box">
+		<ul>
+			<li>메뉴1</li>
+			<li>메뉴2</li>
+			<li>메뉴3</li>
+			<li>메뉴4</li>
+		</ul>
+	</div><!--#box-->
+
+</body>
+</html>

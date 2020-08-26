@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>영화 박스오피스</title>
+		<link rel="icon" href="img/daum_movie.ico"/>
+		<link rel="stylesheet" href="css/all.min.css"/>
+		<style>
+			/*검색버튼에서 사용되는 font-awesome, search 의 크기를 조절 */
+			#small_icon {
+				font-size: 10px;
+			}
+			/*포스터 사이즈 조절*/
+			.poster {
+				height:100px;
+			}
+		</style>
+	</head>
+	<body>
+	<h1><i class="fas fa-film"></i>&nbsp;아주 멋진 영화 사이트</h1>
+	<h2> <i class="fas fa-search"></i>&nbsp;영화검색</h2>
+<!--
+ 	form으로 실제사이트와 연결을 하려 하였으나
+ 	실제 사이트가 post방식으로 동작하여서 연결할 수 없었습니다.
+-->
+	<form action="http://kobis/business/mast/mvie/searchMovieList.do" name="searchMainTopMovie" method="get" target="_blank">
+		<fieldset>
+			<legend>영화 검색폼</legend>
+			<label for="search">검색</label>
+<!--			<input id="search" name="sMovName" placeholder="검색할 영화 이름"/>	-->
+			<input id="search" name="searchMainTopMovie" placeholder="검색할 영화 이름"/>
+			<button><i id="small_icon" class="fas fa-search"></i>&nbsp;검색</button>
+		</fieldset>
+	</form>
+	<hr/>
+	<h2><i class="fas fa-clipboard-list"></i>&nbsp;일일 박스오피스</h2>
+<!--
+		테이블
+		img폴더 내부 포스터 기준으로 작성하였습니다.
+-->
+	<table border="1">
+		<thead>
+			<tr>
+				<!--thead에서 td는 th로 대체 사용-->
+				<th>순위</th>
+				<th>포스터</th>
+				<th>영화명</th>
+				<th>관객수</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td><img class="poster" src="img/poster1.jpg" alt="포스터1"></td>
+				<td>유열의 음악앨범</td>
+				<td>4,105,618</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td><img class="poster" src="img/poster2.jpg"alt="포스터2"></td>
+				<td>엑시트</td>
+				<td>84,617</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td><img class="poster" src="img/poster3.jpg"alt="포스터3"></td>
+				<td>변신</td>
+				<td>1,135,333</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td><img class="poster"src="img/poster4.jpg"alt="포스터4"></td>
+				<td>분노의질주: 홉스&amp;쇼</td>
+				<td>62,662</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td><img class="poster" src="img/poster5.jpg" alt="포스터5"></td>
+				<td>강철비2: 정상회담</td>
+				<td>1,772,991</td>
+			</tr>
+		</tbody>
+		<tfoot>
+		<tr>
+			<!-- 마지막 하이퍼링크 작성			-->
+			<td colspan="4"><a href="http://www.kobis.or.kr/kobis/business/main/main.do">영화진흥위원회 영화관 입장권 통합전산망 제공</a></td>
+		</tr>
+		</tfoot>
+	</table>
+	</body>
+</html>

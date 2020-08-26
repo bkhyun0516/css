@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 실습</title>
+    <!-- 외부 CSS 사용    -->
+    <link rel="stylesheet" href="css/all.min.css"/>
+    <link rel="stylesheet" href="css/notosanskr.css" />
+    <style>
+        div{
+            /*폰트 설정*/
+            font-family: "Noto Sans KR",sans-serif;
+            /*테두리 설정*/
+            border: 3px solid #4527A0;
+        }
+        #tab1{
+            /*tab1은 bottom 테두리 X*/
+            border-bottom: 0px;
+            /*테두리 곡률 설정*/
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            /*수평 가운데 정렬*/
+            text-align: center;
+            /*너비, 높이*/
+            width: 100px;
+            height: 40px;
+            /*수직 가운데 정렬*/
+            line-height: 40px;
+            /*글자색 배경색*/
+            color: #fff;
+            background-color: #7e57c2;
+        }
+        #box {
+            /*박스내부 여유공간 확보*/
+            padding: 7px;
+            /*테두리 곡률 설정*/
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            /*너비 높이*/
+            width: 270px;
+            height: 270px;
+            /*글자색상*/
+            color:#000;
+            /*배경색*/
+            background-color: #9575CD;
+            /*오버플로 처리*/
+            overflow: hidden;
+        }
+        #box2 {
+            /*수평 가운데 정렬*/
+            text-align: center;
+            /*너비 높이*/
+            width:200px;
+            height: 250px;
+            /*경계선 설정*/
+            border: 5px solid black;
+            /*폰트 사이즈*/
+            font-size: 30px;
+            /*박스 쉐도우 처리*/
+            box-shadow: 3px 4px 30px black ;
+        }
+        #profile {
+            /*윗 여백 처리*/
+            margin-top: 10px;
+            /*너비 높이*/
+            width:150px;
+            height:150px;
+            /*테두리 곡률*/
+            border-radius: 100%;
+            /*테두리 색*/
+            border: 10px solid black;
+        }
+        /*유저아이콘 색 변경*/
+        #usericon{
+            color: #9575CD;
+        }
+        #tri {
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 100px solid blue;
+            border-left: 100px solid transparent;
+
+        }
+    </style>
+</head>
+<body>
+    <h1><i class="fab fa-connectdevelop"></i> 실습</h1>
+    <h2>탭모양만들기</h2>
+    <div id="tab1">
+        텝1
+    </div>
+    <div id="box">
+        내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉내용이 쭉쭉
+    </div>
+    <!--    선긋기-->
+    <hr/>
+    <div id="tri"></div>
+    <hr />
+    <h2>프로필 만들기</h2>
+    <div id="box2">
+        <img id="profile" src="img/profile.jpg" alt="프로필">
+        <i class="fas fa-user-circle" id="usericon"></i> 백경현
+    </div>
+
+</body>
+</html>

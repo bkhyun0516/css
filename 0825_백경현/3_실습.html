@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습문제</title>
+    <style>
+        /* 삼각형 CSS */
+        #triangle{
+            /*너비 높이*/
+            width: 0;
+            height: 0;
+            /*윗방향 삼각형 모양 */
+            border-top:40px solid  transparent;
+            border-right:30px solid transparent;
+            border-bottom:40px solid orangered;
+            border-left:30px solid transparent;
+            /*위치 보정*/
+            margin-top: -40px;
+        }
+        /*이미지 박스 CSS*/
+        #box{
+            /*높이*/
+            height: 600px;
+            /*테두리선 옵션*/
+            border: 20px solid #8BC34A;
+            /*브라우저 가운데 고정*/
+            position: fixed;
+            left: 50%;
+            top:50%;
+            margin:-320px 0 0 -420px;
+            /* 박스 그림자 효과*/
+            box-shadow: 2px 2px 30px gray;
+            padding: 0;
+            background-position: center center;
+        }
+        /* h1 요소 CSS*/
+        h1 {
+            /* 높이 너비 */
+            width:700px;
+            height: 100px;
+            /* 글자 색 & 크기 & 그림자효과*/
+            color:#ffffff;
+            font-size: 40px;
+            text-shadow: 2px 2px 0 black ;
+            /*h1  area 내부에서 글자 위치 조정*/
+            line-height: 100px;
+            padding-left: 35px;
+            /*h1 뒷배경색 지정*/
+            background-color: #8BC34A;
+            /*h1 area 위치 조정*/
+            position: absolute;
+            margin-left: -40px;
+        }
+        /* h1요소의 가상 요소 선택자*/
+        h1::before{
+            /*필수 속성*/
+            content: "";
+            /* 삼각형 형상 구현*/
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-top: 20px solid #7CB342;
+            /* 위치 보정*/
+            position:absolute;
+            margin: 100px 0 0 -35px;
+        }
+    </style>
+</head>
+<body>
+    <div id="triangle"></div>
+	
+	<!-- 자신이 좋아하는 인물이나 물건등으로 해보세요. -->
+    <div id="box">
+        <h1>DBS Superleggera 007 Edition</h1>
+        <img src="img/dbs.jpg" width="800"/>
+    </div><!--//box-->
+	
+</body>
+</html>

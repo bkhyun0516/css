@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>firefox</title>
+    <style>
+        /* phone 아이디 선택자 CSS 기술*/
+        #phone {
+            /*너비 높이*/
+            width: 327px;
+            height: 586px;
+            /*반복 X*/
+            background-repeat: no-repeat;
+            /*백그라운드 이미지 앞에 나올 순서대로 호출*/
+            background-image: url(img/phone-overlay.png),
+                             url(img/screen-overview.jpg),
+                             url(img/phone-shadow.png);
+            /* 브라우저 가운데 상시 고정*/
+            position: fixed;
+            top: 50%;
+            left:50%;
+            margin: -293px 0 0 -163.5px;
+            /*백그라운드 이미지들의 각각 위치 보정*/
+            background-position: center center, center 80px, center bottom;
+
+        }
+        /* fox 아이디 선택자 CSS 기술*/
+        #fox{
+            /*애니메이션 이미지 선택*/
+            background-image: url(img/foxtail.png);
+            /* 너비 높이*/
+            height: 156px;
+            width: 156px;
+            /*포지션 고정 -> phone의 기준에 따라 고정*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -78px 0 0 -78px;
+            /*애니메이션 호출 및 옵션 선택*/
+            animation: ani .5s infinite steps(45);
+        }
+        /*애니메이션 설정*/
+        @keyframes ani {
+            0%{background-position: 0 0}
+            100%{background-position: -7020px 0 }
+        }
+    </style>
+</head>
+<body>
+    <div id="phone">
+        <div id="fox"></div>
+    </div>
+</body>
+</html>

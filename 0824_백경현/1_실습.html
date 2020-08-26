@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>밴드 홈 | 밴드</title>
+    <!--    파비콘 사용-->
+    <link rel="icon" href="img/favicon.ico">
+</head>
+<body>
+<h1><a href="https://band.us">band</a></h1>
+<!--form 작성-->
+<form action>
+    <fieldset>
+        <legend>밴드, 페이지, 게시글 검색</legend>
+         <input placeholder="밴드,페이지,게시글 검색"/>
+         <button>검색</button>
+    </fieldset>
+</form>
+
+<h2>내 메뉴</h2>
+<!-- 순서 없는  ul요소 사용-->
+<ul>
+    <li><a href="https://band.us/feed">새글 피드</a></li>
+    <li><a href="https://band.us/discover">찾기</a></li>
+    <li><button type="button">새로운 새소식이 1개 있습니다.</button></li>
+    <li><button type="button">
+        <img src="img/profile.jpg" height="50px" alt="프로필사진" >내정보, 설정, 로그아웃</button>
+        <!--ul 내부 중첩        -->
+        <ul>
+            <li><a href="https://band.us/my/profile">내 정보</a></li>
+            <li><a href="https://band.us/my/post">내가 쓴 글</a></li>
+            <li><a href="https://band.us/my/post">북마크</a></li>
+            <li><a href="https://band.us/my/band-join-qnas">가입 질문과 답변</a></li>
+            <li>
+                <ul>
+                    <li><a href="https://band.us/finding-inviation">초대코드 확인</a></li>
+                    <li><a href="https://band.us/cs/notice">공지사항</a></li>
+                    <li><a href="https://band.us/setting/email-alarm">이메일 알림설정</a></li>
+                    <li><a href="https://band.us/setting">설정</a></li>
+                </ul>
+            </li>
+            <li><a href="https://band.us/setting">로그아웃</a></li>
+        </ul>
+    </li>
+</ul>
+
+<h2>내 목록</h2>
+<button type="button">목록 편집</button>
+<h3>편집 메뉴</h3>
+<ul>
+    <li><a href="https://band.us/">상단 고정 관리</a></li>
+    <li><a href="https://band.us/">숨긴 목록 관리</a></li>
+</ul>
+<h3>밴드 목록</h3>
+<ul>
+    <li><a href="https://band.us/band-create">밴드만들기</a></li>
+    <li>
+        <a href="https://band.us/band/80973053">
+            <!-- a요소 안 내용 div요소로 처리              -->
+                <div><img src="img/band1.jpg" alt="밴드1 사진"/></div>
+                <div>BMJ</div>
+                <div>멤버 26</div>
+        </a>
+    </li>
+    <li>
+        <a href="https://band.us/band/80989091">
+                <div><img src="img/band2.jpg" alt="밴드2 사진"/></div>
+                <div>BMJ 질문용</div>
+                <div>멤버 26</div>
+        </a>
+    </li>
+</ul>
+
+<h2>운영정책 및 약관 안내</h2>
+<div>
+    <a href="https://blog.naver.com/bandapp">블로그</a>&nbsp;<a href="https://band.us/cs/notice">공지사항</a>&nbsp;<a href="https://partners.band.us/partners/sticker">스티커제안</a>&nbsp;<a href="https://ad.band.us/">광고</a>
+</div>
+<div>
+    <!-- BAND글자강조    -->
+    <strong>BAND</strong> &copy; 2020
+</div>
+</body>
+</html>
