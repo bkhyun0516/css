@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입 | 밴드</title>
+<!--    파비콘-->
+    <link rel="icon" href="img/favicon.ico"/>
+    <style>
+        /* css */
+        #mar {
+            margin :15px 0 15px 0;
+        }
+        #txt {
+            width : 200px;
+            height: 80px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <!--하이퍼링크    -->
+   <div><a href="https://band.us/" target="_blank">BAND</a></div>
+    <!--제목   -->
+    <h1>회원가입</h1>
+<!--    폼작성-->
+    <form action="" method="get">
+<!--        이메일 부분-->
+        <div>
+            <label for="email">이메일</label>
+            <input id="email" name="email" placeholder="이메일"/>
+        </div>
+<!--        비밀번호 부분-->
+        <div>
+            <label for="pw">비밀번호</label>
+            <input id="pw" name="pw" placeholder="비밀번호"/>
+            <button type="button" id="pwbtn">비밀번호 표시</button>
+        </div>
+<!--        폼 설명 -->
+        <div id="mar">
+            비밀번호는 알파벳과 숫자를 포함해야 하고 8자 이상이어야합니다.
+        </div>
+<!--        이름 부분-->
+        <div>
+            <label for="nm">이름</label>
+            <input id="nm" name="nm" placeholder="이름"/>
+        </div>
+<!--        생년월일-->
+        <div>
+            <label>생년월일</label>
+<!--            년-->
+            <select >
+                <option>2020</option>
+                <option>2019</option>
+                <option>2018</option>
+                <option>2017</option>
+                <option>2016</option>
+                <option>2015</option>
+                <option>2014</option>
+                <option>2013</option>
+                <option>2012</option>
+                <option>2011</option>
+                <option>2010</option>
+                <option>2009</option>
+                <option>2008</option>
+                <option>2007</option>
+                <option>2006</option>
+                <option>2005</option>
+                <option>2004</option>
+                <option>2003</option>
+                <option>2002</option>
+                <option>2001</option>
+                <option>2000</option>
+            </select>년
+<!--            월-->
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+            </select>월
+<!--            일-->
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>
+            </select>일
+        </div>
+<!--        확인버튼-->
+        <div>
+            <button>확인</button>
+        </div>
+<!--        개인정보보호약관이미지 삽입-->
+        <div>
+            <img src="img/captcha.jpg" alt="개인정보보호약관그림"/>
+        </div>
+<!--        textarea 할당-->
+        <div>
+            <textarea id="txt"></textarea>
+        </div>
+    </form>
+    <script src="js/jquery.js"></script>
+    <script>
+    </script>
+</body>
+</html>

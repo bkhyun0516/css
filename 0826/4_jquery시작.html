@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery 시작</title>
+
+</head>
+<body>
+    <h1>안녕?</h1>
+    <button class="btn">눌러봐!</button>
+<!--    jquery import / 안에 코드작성 X -->
+    <script src="js/jquery.js"></script>
+<!--    코드 작성 장소-->
+    <script>
+    //순수자바스크립트 복잡함
+    // var btn= document.getElementsByTagName("button")[0];
+    // btn.style.color="red";
+    /*
+        jquery는 $만 기억해
+        $(선택자) <- 요소 선택된다!
+
+        jquery의 메서드
+        1)css():    css관련
+        2)text():   글자관련
+     */
+    $("button");
+    //  => var btn= document.getElementsByTagName("button");랑 같은 코드
+    // $("h1").css("color","red").text("Bye!");
+
+    // $("button").click(function (){
+    //     $("h1").css("color","red").text("Bye!");
+    // });// click() end;
+
+    //1) 유저가 btn클래스인 button 요소를 클릭햇을때
+     $(".btn").click(function () {
+         //2) h1요소를 선택하고 글자색을 변경하고
+         // 글자를 변경
+        $("h1").css("color","rgb(220,101,211)");
+        $("h1").text("하이하이");
+        // 또는 이렇게도 가능
+        // $("h1").css("color","rgb(220,101,211)")
+        // .text("하이하이");
+     });// click() end;
+
+    </script>
+</body>
+</html>

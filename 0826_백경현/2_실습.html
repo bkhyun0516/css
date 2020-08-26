@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<title>파도치는섬</title>
+		<style>
+			body {
+				/*margin: -952px 0 0 -487px;*/
+				/*백그라운드 이미지 할당 및  반복 X*/
+				background-image: url(img/model_bg.png),url(img/ombra_bg.png);
+				background-repeat: no-repeat;
+			}
+			#island{
+				/*백그라운드 이미지 할당 및  반복 X*/
+					background-image: url("img/home_mondoall.png");
+					background-repeat: no-repeat;
+					/*너비 높이*/
+					width:1190px;
+					height: 520px;
+					/*포지션 브라우저 가운데 고정*/
+					position: fixed;
+					left:50%;
+					top: 50%;
+					margin: -260px 0 0 -595px;
+			}
+			#wave {
+				/*백그라운드 이미지 할당(애니메이션 그림)*/
+				background-image: url("img/mare_verticale.png");
+				/*애니메이션 너비 높이 조절*/
+				width: 988px;
+				height:	99px;
+				/*17frame의 애니메이션 효과 설정*/
+				animation: ani 1s infinite steps(17);
+				/*위치 설정*/
+				position: absolute;
+				top:50%;
+				left:50%;
+				margin: 57px 0 0 -577px;
+			}
+			/*애니메이션 설정*/
+			@keyframes ani {
+				0% {background-position: 0 0;}
+				100%{background-position:0 -1683px; }
+			}
+		</style>
+	</head>
+	<body>
+		<div id="island">
+			<div id="wave"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>슈퍼마리오</title>
+<!--	방향키 화살표를 위한 font awesome 링크-->
+	<link rel="stylesheet" href="css/all.min.css"/>
+	<style>
+		ul {
+			/*리스트 스타일과 브라우저 기본 패딩및 마진 제거*/
+			list-style: none;
+			padding: 0;
+			margin:0;
+		}
+		button{
+			/*버튼 크기 조절*/
+			width:100px;
+			height: 100px;
+			/*삐져나가는 글자 감춘다*/
+			overflow: hidden;
+			/*테두리 설정*/
+			border: 0 solid white;
+			/*뒷배경색상설정*/
+			background-color:dodgerblue;
+		}
+		i {
+			/*폰트 설정 크기 색상 그림자 효과 설정*/
+			font-size: 100px;
+			color: white;
+			text-shadow: 1px 1px 1px black;
+		}
+		#wrap{
+			/*가장큰 테두리 설정*/
+			/*테두리 설정 및 박스효과*/
+			border: 1px solid #eeeeee ;
+			box-shadow: 0 0 50px gray;
+			/*너비 높이 */
+			width: 900px;
+			height: 900px;
+			/*브라우저 가운데 위치 고정*/
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			margin: -450px 0 0 -450px;
+		}
+		#mazeBox {
+			/*마리오가 움직일 공간 표시*/
+			/*브라우저 가운데 위치 고정*/
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			margin: -350px 0 0 -350px;
+			/*너비 높이 설정*/
+			width: 700px;
+			height: 700px;
+			/*테두리 설정*/
+			border: 1px solid gray;
+		}
+		#character {
+			/*캐릭터이미지 높이*/
+			height: 100px;
+			/*변화 속도와 가속도*/
+			transition: .5s linear;
+		}
+		/*방향키 이미지들 위치 설정*/
+		.top{
+			position: absolute;
+			left:50%;
+			margin-left: -50px;
+		}
+		.right{
+			position: absolute;
+			left:100%;
+			top:50%;
+			margin-left: -100px;
+			margin-top:-50px;
+		}
+		.bottom{
+			position: absolute;
+			left:50%;
+			top:100%;
+			margin-left: -50px;
+			margin-top:-100px;
+		}
+		.left{
+			position: absolute;
+			top:50%;
+			margin-top: -50px;
+		}
+	</style>
+</head>
+<body>
+<div id="wrap">
+	<ul>
+		<li class="top"><button><i class="fa fa-arrow-up"></i><span class="ir">위로</span></button></li>
+		<li class="right"><button><i class="fa fa-arrow-right"></i><span class="ir">오른쪽으로</span></button></li>
+		<li class="bottom"><button><i class="fa fa-arrow-down"></i><span class="ir">아래로</span></button></li>
+		<li class="left"><button><i class="fa fa-arrow-left"></i><span class="ir">왼쪽으로</span></button></li>
+	</ul>
+	<div id="mazeBox">
+		<img id="character" src="img/mario.png" width="100" alt="슈퍼마리오"/>
+	</div><!-- //mazeBox -->
+</div><!-- //wrap -->
+<script src="js/jquery.js"></script>
+<!--자바 스크립트 설정-->
+<script>
+<!--	x축 y축 변수 선언-->
+	var x=0;
+	var y=0;
+	//버튼 클릭시 동작 정의
+	$(".right").click(function () {
+		//조건문으로 제한조건 확인
+		if(x<600){
+			//제한조건 통과시 캐릭터이미지 위치 변화
+			x+=50;
+			$("#character").css("transform",`translate(${x}px,${y}px)`);
+		} else{
+			//불가 메시지
+			alert("더이상 오른쪽으로 갈 수 없습니다.");
+		}
+	});
+	$(".left").click(function () {
+		if(x>0){
+			x-=50;
+			$("#character").css("transform",`translate(${x}px,${y}px)`);
+		} else{
+			alert("더이상 왼쪽으로 갈 수 없습니다.");
+		}
+	});
+	$(".top").click(function () {
+		if(y>0){
+			y-=50;
+			$("#character").css("transform",`translate(${x}px,${y}px)`);
+		} else{
+			alert("더이상 위쪽으로 갈 수 없습니다.");
+		}
+	});
+	$(".bottom").click(function () {
+		if(y<600){
+			y+=50;
+			$("#character").css("transform",`translate(${x}px,${y}px)`);
+		} else{
+			alert("더이상  아래쪽으로 갈 수 없습니다.");
+		}
+	});
+	//키보드 입력 함수
+	$(document).keydown(function (event){
+		//입력받은 이벤트의 키코드 확인해 해당되는 키에 맞춰 동작
+		if(event.keyCode == 37){ //좌
+			if(x>0){
+				x-=50;
+				$("#character").css("transform",`translate(${x}px,${y}px)`);
+			} else{
+				alert("더이상 왼쪽으로 갈 수 없습니다.");
+			}
+		}else if(event.keyCode == 38){//상
+			if(y>0){
+				y-=50;
+				$("#character").css("transform",`translate(${x}px,${y}px)`);
+			} else{
+				alert("더이상 위쪽으로 갈 수 없습니다.");
+			}
+		} else if(event.keyCode == 39){//우
+			if(x<600){
+				x+=50;
+				$("#character").css("transform",`translate(${x}px,${y}px)`);
+			} else{
+				alert("더이상 오른쪽으로 갈 수 없습니다.");
+			}
+		}else if(event.keyCode == 40){//하
+			if(y<600){
+				y+=50;
+				$("#character").css("transform",`translate(${x}px,${y}px)`);
+			} else{
+				alert("더이상  아래쪽으로 갈 수 없습니다.");
+			}
+		}
+	});
+
+</script>
+</body>
+</html>

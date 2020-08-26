@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>move</title>
+    <style>
+        #box{
+            background-color: hotpink;
+            width: 600px;
+            height: 600px;
+        }
+        #scappy{
+            /*
+                translate:  운반하다,옮기다
+                포지션이 static이어도 이동 가능 파라미터 픽셀값 또는 %  가능
+            */
+            transform: translate(0,0);
+            transition: 1s linear;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <button id="upBtn">위쪽</button>
+</div>
+<div>
+    <button id="leftBtn">왼쪽</button>
+    <button id="downBtn">아래쪽</button>
+    <button id="rightBtn">오른쪽</button>
+</div>
+<div id="box">
+    <img id="scappy" src="img/scappy.gif" width="100" alt="스캐피"/>
+</div>
+<script src="js/jquery.js"></script>
+<script>
+    //전역변수 a를 선언하고  0으로 초기화(대입)
+    var a=0;
+    var b=0;
+    //  #scappy요소를 선택한후
+    // css의 transform속성의 값을
+    // translate(x,y)로 변경
+    $("#leftBtn").click(function () {
+        if(a<=400){
+            //기존의 a값에 100을 더해서 다시 a에 대입
+            a+=100;
+        }
+        $("#scappy").css("transform","translate("+a+"px,"+b+"px)");
+    });
+    $("#rightBtn").click(function () {
+        if(a>=100){
+            a-=100;
+        }
+        $("#scappy").css("transform",`translate(${a}px,${b}px)`);
+    });
+    $("#downBtn").click(function () {
+        if(b<=400){
+            //기존의 b값에 100을 더해서 다시 b에 대입
+            b+=100;
+        }
+        $("#scappy").css("transform","translate("+a+"px,"+b+"px)");
+    });
+    $("#upBtn").click(function () {
+        if(b>=100){
+            b-=100;
+        }
+        $("#scappy").css("transform",`translate(${a}px,${b}px)`);
+    });
+</script>
+</body>
+</html>
