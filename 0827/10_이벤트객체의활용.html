@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트객체의 활용</title>
+    <style>
+            html {
+                cursor: crosshair;
+            }
+            #ang {
+                position: fixed;
+                left:0;
+                top:0;
+                /*transition: .1s ease;*/
+                box-shadow: 0 0 1px grey;
+            }
+    </style>
+</head>
+<body>
+<img id="ang" src="img/ang.jpg" width="150"/>
+
+<script src="js/jquery.js"></script>
+<script>
+    // $("html").click(function (event){
+    //     /*
+    //         event: event객체(이벤트에 대한 데이터를 가지고 있다!)
+    //         ex) 마우스 이벤트: x,y 좌표
+    //             키보드 이벤트: keyCode
+    //
+    //      */
+    //     // console.log(event.clientX);//X좌표
+    //     // console.log(event.clientY);//Y좌표
+    //     const x=event.clientX;
+    //     const y=event.clientY;
+    //     $("#ang").css(
+    //         {
+    //             left: x-75,
+    //             top: y-77.375,
+    //         }
+    //     );//$("#ang").css() end
+    // });//$("html").click() end
+    $("html").mousemove(function (event){
+        /*
+            event: event객체(이벤트에 대한 데이터를 가지고 있다!)
+            ex) 마우스 이벤트: x,y 좌표
+                키보드 이벤트: keyCode
+
+         */
+        // console.log(event.clientX);//X좌표
+        // console.log(event.clientY);//Y좌표
+        const x=event.clientX;
+        const y=event.clientY;
+        $("#ang").css(
+            {
+                left: x-75,
+                top: y-77.375,
+            }
+        );//$("#ang").css() end
+    });//$("html").click() end
+</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a09171f7-f256-4bd6-925b-ac776210afc6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/10_이벤트객체의활용.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11_실습.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_요소의 종류.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_함수_인자_리턴.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3_문자열합침.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4_css메서드.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_자바스크립트객체.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6_jquery함수.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_속성관련메서드.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8_난수발생.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/9_랜덤색상.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0826_백경현/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../0826_백경현/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1geur95srouMQhMGiShkoPevgSV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a09171f7-f256-4bd6-925b-ac776210afc6" name="Default Changelist" comment="" />
+      <created>1598487575040</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598487575040</updated>
+      <workItem from="1598487576430" duration="24948000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="711" y="364" key="#Notifications" timestamp="1598487599367">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="711" y="364" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1598487599367" />
+    <state x="623" y="251" width="672" height="678" key="search.everywhere.popup" timestamp="1598516326481">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="251" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598516326481" />
+  </component>
+</project>

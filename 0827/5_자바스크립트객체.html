@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 객체</title>
+<!--    <style>-->
+<!--        h1 {-->
+<!--            color:red //css의 속성: 명과 값으로 구성-->
+<!--        }-->
+<!--    </style>-->
+</head>
+<body>
+<h1 id="test">hi?hello?안녕?</h1>
+<h2>hello everyone?</h2>
+<script src="js/jquery.js"></script>
+<script>
+    // var obj = {}; //객체와 연결된 변수 obj (reference라 함)
+    // alert(obj);
+    var hwang ={
+        name : "황정민",
+        height : 180,
+        weight:75,
+        test: function (){
+            alert("이게메소드!!");
+        }
+    };
+    //이름 속성값을 이정재로 변경
+    hwang.name="이정재";
+    //몸무게를 71로 변경
+    hwang.weight =71;
+    // alert(hwang.weight);
+    hwang.test();
+    //개발자도구(F12)console에 출력
+    console.log(hwang);
+
+    /*
+        객체란?
+        자바스크립트의객체: 속성들의 묶음
+
+        자바는 클래스 기반으로 클래스 기반으로 객체를 선언 해야한다.
+        자바스크립트는 객체를 바로 만들어낼수 있다.
+        - 자바스크립트의 객체 생성
+        - {]
+        - new object();
+
+        - 속성명은 자료형이 무조건 문자열형: 그래서 "", '' 생략가능!
+
+        - 객체의 속성접근법: '.'
+
+        함수 선언방법
+        function test() {
+
+        }
+        var test= function () {
+
+        }
+     */
+</script>
+</body>
+</html>

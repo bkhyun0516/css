@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>호호아줌마</h1>
+<!-- jquery import-->
+<script src="js/jquery.js"></script>
+<script>
+    //jquery는 라이브러리이다.
+    $("h1").css("color","red");//$함수호출 == jQuery("h1").css("color","red");
+    /*
+        jQuery() -> $()
+        jQuery 함수를 호출했을때 리턴되는 결과가 객체
+        jquery 객체(순수자바스크립트 객체와는 다르다)
+   ///////////////////////////////////////////////////////////////////
+        $h1 변수를 선언하고,
+        jquery 함수를 호출하여, jquery,객체를 얻어와서
+        변수 $h1에 대입
+        */
+        var $h1= $("h1");
+        $h1.css("color","red").text("32분까지 쉬어요S2");
+
+
+
+</script>
+</body>
+</html>

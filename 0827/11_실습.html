@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>실습</title>
+    <style>
+        html {
+            cursor: crosshair;
+        }
+        #circle{
+            width: 100px;
+            height: 100px;
+            position:fixed;
+            left:0;
+            right: 0;
+            box-shadow: 0 2px 5px black;
+            transition: .1s ease;
+            border-radius: 100%;
+            background:deeppink;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            text-shadow: 0 2px 5px black;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="circle">0</div>
+
+<script src="js/jquery.js"></script>
+<script>
+    let num = 0;
+
+    $("html").click(function (event){
+        num++;
+        const x = event.clientX;
+        const y = event.clientY;
+        const r = Math.floor(Math.random()*256);
+        const g = Math.floor(Math.random()*256);
+        const b = Math.floor(Math.random()*256);
+        const bodyr = Math.floor(Math.random()*256);
+        const bodyg = Math.floor(Math.random()*256);
+        const bodyb = Math.floor(Math.random()*256);
+        const size = Math.floor(Math.random()*400)+50;
+
+        $("body").css({
+            backgroundColor: "rgb("+bodyr+","+bodyg+","+bodyb+")"
+        });//$("body").css() end
+
+        $("#circle").css({
+            left : x - size/2,
+            top : y - size/2,
+            backgroundColor: "rgb("+r+","+g+","+b+")",
+            width: size,
+            height: size,
+            lineHeight: size +"px",
+            fontSize: size*0.5,
+        });//$("$circle").css() end
+        //
+        $("#circle").text(num);//$("#circle").text() end
+    });//$("html").click() end
+
+</script>
+</body>
+</html>

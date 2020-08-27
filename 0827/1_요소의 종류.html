@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>요소의 종류</title>
+    <style>
+        span {
+            /*
+                인라인레벨요소들은
+                글자 자체이기 때문에
+                width, height 지정할수 없고
+                단지 글자의 크기 입니다.
+             */
+
+            /*  display 속성으로
+                inline < = > block 변경가능
+                none속성 가진다면 숨겨진다.
+            */
+            /*display: block;*/
+            /*font-size:30px;*/
+            background-color: red;
+        }
+        div {
+            /*
+                width:400px;
+                height:300px
+            */
+            /*display: inline;*/
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<a href="">a</a>
+<abbr>ㅋㅋㅋㅋ</abbr>
+<figure>afnadkln  </figure>
+<a href="">z</a>
+
+
+
+<h1>나는 블록레벨</h1>
+<h2>나도 블록레벨</h2>
+<ol>
+    <li>나역시</li>
+    <li>블록스</li>
+</ol>
+<dl>
+    <dt>lst</dt>
+    <dt>lst</dt>
+</dl>
+<p>
+    나는 블록레벨인데 특이하게 자손은 무조건
+    인라인레벨(글자)이어야 합니다.
+</p>
+<div> 대표적 블록레벨</div>
+<hr/>
+
+<em>인라인레벨</em>
+<strong>나도 인라인</strong>
+<span>대표적인 인라인 요소</span>
+<a href>a요소</a>
+<img src="img/0_LampardF.jpg">
+<button>버튼</button>
+<i>원래 i는 이텔릭</i>
+<mark>마크 50</mark>
+<select></select>
+<textarea></textarea>
+<input>
+<!--
+    요소의 종류
+    1) 대체되는 요소 / 대체되지 않는 요소
+    -> 대체되는 요소란? input, img, button처럼
+        UI컴포넌트로 대체되는 요소들(거의 다 인라인레벨)
+
+    2) 블록(레벨) 요소 / 인라인(레벨) 요소(※정말 중요)
+
+    ※ 블록 레벨
+    - 컨테이너: 레이아웃을 담당한다.
+    - 줄바꿈이 일어난다.
+    - (CSS에서)  width, height가 적용된다.
+    - h1~h6, ul, ol, dl, li, p, br, hr ....
+    - 가장 대표적인 블록레벨이 바로 'div'
+
+    ※ 인라인 레벨
+    - 컨텐츠: 내용을 담당한다.
+    - 줄바꿈이 일어나지 않고 한줄로(inline)
+    - width, height가 적용되지 않음
+    (대체되는 요소들은 inline 이지만 적용)
+    - a,input, select, img, en ,strong, i, button,
+       textarea..
+    - 대표적 inline요소는 span
+
+-->
+
+
+</body>
+</html>
