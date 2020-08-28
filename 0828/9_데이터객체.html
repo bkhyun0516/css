@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>9_Date객체</title>
+</head>
+<body>
+<h1>??</h1>
+<script src="js/jquery.js"></script>
+<script>
+    function displayTime() {
+        //Date 객체 생성
+        const now = new Date();
+
+        //년도(밀레니엄 버그)
+        const year = now.getFullYear();
+
+        //월 얻기(0월 부터 시작)
+        const month = now.getMonth() + 1;
+        //일 얻기
+        const date = now.getDate();
+        // 시 얻기
+        const hour = now.getHours();
+
+        // 분 얻기
+        const min = now.getMinutes();
+
+        //초 얻기
+        const sec = now.getSeconds()
+
+        const fullTime = year +"년 "+  month +"월 "+ date +"일 "+ hour +"시 "+ min +"분 "+sec+"초";
+        $("h1").text(fullTime);
+        // alert(" " + year +  month + date + hour + min +sec);
+    }// displayTime() end
+
+
+    setInterval(displayTime,1000);
+    /*
+
+     */
+
+</script>
+</body>
+</html>

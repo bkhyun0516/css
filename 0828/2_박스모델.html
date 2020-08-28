@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>박스모델</title>
+    <style>
+        body{
+            /*바디와 html 사이간  margin 설정*/
+            /*margin : 0;*/
+            border: 1px solid gold;
+
+        }
+        #box {
+            width: 100px;
+            height: 100px;
+            /*보더와 컨텐츠 사이공간*/
+            padding: 50px;
+            background-color: red;
+            margin: 50px;
+            border: 50px solid dodgerblue;
+            /*뒷배경 적용범위 지정  <- 잘 안쓴다 */
+            background-clip: content-box;
+        /*
+            박스모델
+            - width, height, border, margin, padding 합쳐서 계산
+              (14개속성 값의 합)
+            - 기본값 or 음수 값(?)
+            - auto 값
+
+
+
+            - width, height 기본값: auto
+            - width가 auto면 부모의 width
+            - height 값이 auto면 자식의 height 합 -> 자식이 없으면 0!
+            - 뒷배경색은 (기본적으로) 보더까지
+
+            width, height?
+            박스 모델의 너비, 높이?? <= 더 중요
+            (margin, border, padding);
+        */
+        }
+    </style>
+</head>
+<body>
+<div id="box">안녕하세욥</div>
+</body>
+</html>

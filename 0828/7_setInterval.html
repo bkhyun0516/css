@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>0</h1>
+<h2>0</h2>
+<button id="stopBtn">멈춰!</button>
+<button id="reset">초기화</button>
+<script src="js/jquery.js"></script>
+<script>
+    let num1=0;
+
+    const id1 = setInterval(function (){
+        $("h1").text(++num1);
+        // $("h2").text(Math.floor(num1/3));
+    },1000);//setInterval() end
+
+    let num2=0;
+    const id2 = setInterval(function (){
+        $("h2").text(++num2);
+    },3000);//setInterval() end
+
+
+    $("#stopBtn").click(function (){
+
+        //첫번째 인터벌 멈춤
+        clearInterval(id1);
+        //두번째 인터벌 멈춤
+        clearInterval(id2);
+
+    });//$("#stopBtn").click() end
+
+    $("#reset").click(function (){
+        num1=0;
+        $("h1").text(0);
+        $("h2").text(0);
+    });//$("#reset").click() end
+
+
+</script>
+</body>
+</html>

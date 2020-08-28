@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>복습</title>
+    <style>
+        button {
+            cursor: pointer;
+            padding: 12px 18px;
+            border: none;
+        }
+        button:nth-child(1){background-color: deeppink;}
+        button:nth-child(2){background-color: deepskyblue;}
+        button:nth-child(3){background-color: lime;}
+        #box {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #424242;
+        }
+    </style>
+</head>
+<body>
+<p>
+    <button>deeppink</button>
+    <button>deepskyblue</button>
+    <button>lime</button>
+</p>
+<div id="box"></div>
+<script src="js/jquery.js"></script>
+<script>
+    $("button").click(function () {
+        // CSS의 백그라운드 색상속성으로 가져오는 방식
+        // const color = $(this).css("background-color");
+        /*
+               ※  우리가 클릭한 그 버튼 요소에 뒷배경색을 얻어와야한다.
+               const color = $(this).css("background-color");
+               ※   글자 얻어오기
+               const color = $(this).text();
+               //id가 box인 div요소에 뒷배경색으로 세팅
+               $("#box").css.("backgroundColor",color);
+         */
+        //
+        // text 이용
+        const color = $(this).text();
+        console.log(color);
+        $("#box").css({
+            backgroundColor: color
+       });//$("#box").css() end
+    });//$("button").click() end
+</script>
+</body>
+</html>

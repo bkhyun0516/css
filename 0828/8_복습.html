@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>게임기능</title>
+    <style>
+        button {
+            background-color: lightgrey;
+            border: 1px solid grey;
+        }
+        #cheat {
+            color: white;
+            background-color: white;
+            border: 1px solid white;
+            position:fixed;
+            left: 500px;
+            right: 500px;
+        }
+        #cheat:hover {
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+<h2>?</h2>
+<p>
+    <button id="startBtn">시작</button>
+    <button id="stopBtn">멈춤</button>
+    <button id="resetBtn" disabled="disabled">초기화</button>
+</p>
+<div>
+    <button id="cheat">1 </button>
+</div>
+
+<script src="js/jquery.js"></script>
+<script>
+    let num=0;
+    let id;
+    $("#startBtn").click(function () {
+        //비활성화
+        $("#startBtn").attr("disabled",true);
+        $("#resetBtn").attr("disabled",true);
+        //활성화
+        $("#stopBtn").attr("disabled",false);
+        id = setInterval(function(){
+            $("h2").text(num++);
+        },1);//setInterval() end
+        console.log("현재 id"+id);
+    });//$("#startBtn").click() end
+
+    $("#stopBtn").click(function () {
+        clearInterval(id);
+        //비활성화
+        $("#stopBtn").attr("disabled",true);
+        //활성화
+        $("#startBtn").attr("disabled",false);
+        $("#resetBtn").attr("disabled",false);
+    });//$("#stopBtn").click() end
+
+    $("#resetBtn").click(function () {
+        //num 변수 리셋
+        num=0;
+        // 텍스트 초기화
+        $("h2").text("?");
+        // 비활성화
+        $("#resetBtn").attr("disabled",true);
+    });//$("#resetBtn").click() end
+
+
+
+    $("#cheat").click(function () {
+        $("h2").text("1000");
+    });
+</script>
+</body>
+</html>

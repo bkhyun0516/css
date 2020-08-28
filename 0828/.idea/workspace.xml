@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="95d9cd8f-9e6b-4a23-b513-dc88c2fff346" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10_복습문제.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_0827실습문제리뷰.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_박스모델.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3_복습.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4_this.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_복습.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6_setTimeout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_setInterval.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8_복습.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/9_데이터객체.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/loader.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0826_백경현/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../0826_백경현/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0827/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../0827/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0827/img/0_LampardF.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0827/img/ang.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0827/img/ico1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0827/img/ico2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0827/img/ico3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0827/img/ico4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0827/img/ico5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0827/img/ico6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0827/img/ico7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0827/img/ico8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0827/img/scappy.gif" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1ghli8jUuAyGEfO8XuhOUE1bMSG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\BMJ\workspace\front_end\0828\img" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="95d9cd8f-9e6b-4a23-b513-dc88c2fff346" name="Default Changelist" comment="" />
+      <created>1598574829918</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598574829918</updated>
+      <workItem from="1598574831053" duration="26637000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="628" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1598580766490">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="628" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598580766490" />
+  </component>
+</project>

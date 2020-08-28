@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>this</title>
+</head>
+<body>
+    <button>버튼1</button>
+    <button>버튼2</button>
+    <button>버튼3</button>
+    <button>버튼4</button>
+    <button>버튼5</button>
+<script src ="js/jquery.js"></script>
+<script>
+
+    /*
+            text(), css(), attr(), click() 배움
+
+
+            index() : 부모로 부터 몇번쨰 자식인지
+                      index 숫자값을 얻어오는 getter
+            인덱스는 0 부터
+     */
+    $("button").click(function () {
+        /*
+            this라는 키워드 : 그요소 의미
+            this는 순수 자바스크립트 요소 객체
+             jquery 객체가 아님
+            순수자바스크립트 객체 => jquery객체로 변경
+            $(객체)
+        */
+        console.log(this);
+        console.log($(this));
+        const idx = $(this).index();
+        alert( idx+1+"번 버튼");
+        $(this).css("background-color","red");
+    });//$("button").click() end
+</script>
+</body>
+</html>

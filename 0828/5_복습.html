@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>복습</title>
+</head>
+<body>
+<p>
+    <button>변경</button>
+    <button>변경</button>
+    <button>변경</button>
+    <button>변경</button>
+    <button>변경</button>
+    <button>변경</button>
+    <button>변경</button>
+    <button>변경</button>
+</p>
+<img src="img/footer_face01.gif" alt="무지"/>
+<script src="js/jquery.js"></script>
+<script>
+    let altA = new Array('무지','어피치','제이지','프로도','네오','튜브','콘','라이언');
+    $("button").click(function (){
+        const idx = $(this).index();
+        const num = idx+1;
+        $("img").attr(
+            {
+                src:"img/footer_face0"+num+".gif",
+                alt: altA[idx]
+            }
+        );
+        if(idx==6 || idx==7){
+            alert($("img").attr("alt")+"이 나온다!!!");
+        }else{
+            alert($("img").attr("alt")+"가 나온다!!!");
+        }
+    });//$("button").click() end
+</script>
+</body>
+</html>

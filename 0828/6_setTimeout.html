@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>타이머관련 함수</title>
+</head>
+<body>
+<h1>5초후 간다 구글</h1>
+<img id="cat" src="img/loading2.gif" alt="로딩"/>
+</body>
+<script>
+
+    /*
+            - setTimeout(함수, 시간)
+            : 시간 후에 함수 1번 호출
+
+            - setInterval(함수, 시간)
+            : 시간마다 함수 계속 호출
+
+
+            - clearInterval(id값)
+
+
+            - clearTimeout(id값)
+
+
+
+            BOM(Brower Object Model)
+            - window: 브라우저 그 자체를 의미
+            - document: html문서 자체를 의미
+            - location: 주소창을 의미
+            - history: 히스토리 의미
+
+
+     */
+    setTimeout(function (){
+        alert("냥바~");
+        location.href="http://google.com"
+    },1000);//setTimeout() end
+
+
+</script>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>복습</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+        h1{
+            /*가운데 정렬*/
+            text-align: center;
+        }
+        #box {
+            /*너비높이*/
+            width: 700px;
+            height: 700px;
+            /*브라우저 가운데 고정*/
+            position: fixed;
+            left:50%;
+            top:50%;
+            margin: -350px 0 0 -350px;
+            /*박스 그림자 효과*/
+            box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+        #clock{
+            /*뒷배경 이미지& 색상*/
+            background-color: #9FA8DA;
+            background-image: url(img/Clock-face.png);
+            /*박스 크기에 이미지 맞추기*/
+            background-size: 100%;
+            /*원형*/
+            border-radius: 50%;
+            /*테두리 두께*/
+            border: black 10px solid;
+            /*너비 높이*/
+            width: 500px;
+            height: 500px;
+            /*위치 박스 가운데 고정*/
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -250px 0 0 -250px;
+        }
+        #hour {
+            /*시침 이미지 뒷배경에 넣기*/
+            background-image: url(img/hour_hand.png);
+            /*이미지 크기 조정*/
+            background-size: 100%;
+            /*너비 높이*/
+            width: 500px;
+            height: 500px;
+            /*시계가운데 위치 고정*/
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -250px 0 0 -250px;
+            /*transition: 1s linear;*/
+        }
+        #minute{
+            /*분침이미지 뒷배경으로 넣기*/
+            background-image: url(img/minute_hand.png);
+            /*이미지 크기 조정*/
+            background-size: 100%;
+            /*너비 높이*/
+            width: 500px;
+            height: 500px;
+            /*시계가운데 위치 고정*/
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -250px 0 0 -250px;
+            /*transition: 1s linear;*/
+        }
+        #second{
+            /*초침이미지 뒷배경으로 넣기*/
+            background-image: url(img/second_hand.png);
+            /*이미지 크기 조정*/
+            background-size: 100%;
+            /*너비 높이*/
+            width: 500px;
+            height: 500px;
+            /*시계가운데 위치 고정*/
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -250px 0 0 -250px;
+            /*transition: 1s linear;*/
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1> <i class="fas fa-clock"></i> 시계</h1>
+        <div id="clock">
+            <div id="hour"></div>
+            <div id="minute"></div>
+            <div id="second"></div>
+        </div>
+    </div>
+    //jquery import
+    <script src="js/jquery.js"></script>
+    <script>
+    // 시계 초기 설정
+    //Date 객체 선언
+     const now = new Date();
+     //초를 저장하는  변수
+     const ncs = now.getSeconds();
+     //분를 저장하는  변수
+     const ncm = now.getMinutes();
+     //시를 저장하는  변수
+     const nch = now.getHours();
+     //시간에 맞는 각도 계산
+     const ncts = ncs * 6;
+     const nctm = ncs * 0.1  + ncm * 6;
+     const ncth = ncs * 0.5 / 60 + ncm * 0.5  + nch * 30;
+     //각각 초, 분, 시에 맞게 회전 각도 설정
+     $("#hour").css("transform", "rotate("+ncth+"deg)");
+     $("#minute").css("transform", "rotate("+nctm+"deg)");
+     $("#second").css("transform", "rotate("+ncts+"deg)");
+    // 매 초마다 반복 실행하는  setInterval()
+    setInterval(function () {
+        //Date 객체 선언
+        const ct = new Date();
+        //초를 저장하는  변수
+        const cs = ct.getSeconds();
+        //분를 저장하는  변수
+        const cm = ct.getMinutes();
+        //시를 저장하는  변수
+        const ch = ct.getHours();
+        //시간에 맞는 각도 계산
+        const cts = cs * 6;
+        const ctm = cs * 0.1  + cm * 6;
+        const cth = cs * 0.5 / 60 + cm * 0.5  + ch * 30;
+        //각각 현재시간의  초, 분, 시에 맞게 회전 각도 변경
+        $("#hour").css("transform", "rotate("+cth+"deg)");
+        $("#minute").css("transform", "rotate("+ctm+"deg)");
+        $("#second").css("transform", "rotate("+cts+"deg)");
+    },1000);//setInterval() end
+    </script>
+
+</body>
+</html>
