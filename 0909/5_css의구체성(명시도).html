@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>구체성</title>
+    <style>
+    /*
+         브라우저가 가진 CSS < 상속 CSS < 직접지정
+
+         구체성(명시성: specificity)
+
+         두개 이상의 선택자에서 하나의 요소를
+         선택하고 똑같은 속성의 값을 다르게 지정했을떄 어떤 속성값이
+         적용되는지 판단하는 성질
+        #h1.h1 -> 아이디가 h1이고 클래스가 h1인 요소 지정
+
+        인라인스타일      id     class    요소
+        0                 0      0        0
+
+        !important를 적용하면 구체성을 이김
+        (important적용된 속성끼리 구체성 대결)
+        ==>쓰지마 ㅠㅠ
+    */
+    /*0 0 0 1*/
+    body{
+        color:green;
+    }
+    /*0 0 0 2*/
+    body h1 {
+        color:pink;
+    }
+    /*0 0 0 1*/
+    h1 {
+        color:blue;
+    }
+    /*0 0 1 0*/
+    .h1 {
+        color:mediumpurple;
+    }
+    /*0 1 0 0*/
+    #h1 {
+        color:red;
+    }
+    /*0 1 0 1*/
+    body #h1 {
+        color:orange;
+    }
+    /*0 1 1 0*/
+    #h1.h1 {
+        color:darkturquoise;
+    }
+    /*0 0 0 11*/
+    html>body>div>div>div>div>div>div>div>div>span {
+        color:red;
+    }
+    /*0 0 1 0*/
+    .test {
+        color:blue;
+    }
+    /*0 1 0 0*/
+    #box {
+        width:200px;
+        height:80px;
+        background-color: darkturquoise;
+        cursor: pointer;
+        transition: .1s ease;
+    }
+    /*0 1 1 2*/
+    body>div#box:active {
+        background-color: orange;
+    }
+    /*0 1 1 1*/
+    div#box:hover {
+        width: 300px;
+        height:150px;
+        background-color: red;
+    }
+    /*0 0 0 1*/
+    div {
+        /*color:yellow !important;!* 구체성 무시하고 적용인데 쓰지마 ㅠㅠ*!*/
+    }
+    </style>
+</head>
+<body>
+    <div><div><div><div><div><div><div><div><span class="test">췤</span></div></div></div></div></div></div></div></div>
+    <!-- html 요소의 style 속성으로 지정하는
+        css가 바로 1000
+        =>> 자바스크립트 단에서의 제어 용도
+    -->
+    <h1 id="h1" class="h1">나는 무슨 색</h1>
+    <hr/>
+    <div id="box"></div>
+    <script src="js/jquery.js"></script>
+    <script>
+        $("#h1").click(function () {
+            $(this).css("backgound-color","purple");
+        });
+    </script>
+</body>
+</html>

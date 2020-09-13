@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>이펙트예제</title>
+    <style>
+        #box{
+            width: 720px;
+            height: 540px;
+            background-image: url(img/pizza.jpg);
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <button id="showBtn">show/hide</button>
+        <button id="fadeBtn">fadeIn/Out</button>
+        <button id="slideBtn">slideUp/Down</button>
+    </p>
+    <div id="box"></div>
+    <script src="js/jquery.js"></script>
+    <script>
+        /*
+            이펙트 관련 메서드
+            - hide(): 내부적으로는 display를 none으로 처리
+            - show():  display를 block or inline 처리
+            - toggle(): show/hide 토글
+
+            - fadeIn(): 쓰~윽 나타나는
+            - fadeOut(): 쓰~윽 사라지는
+            - fadeToggle(): 토글
+
+            - slideUp() : 위로 숨겨짐
+            - slideDown(): 아래로 숨겨짐
+            - slideToggle() :위 아래
+        */
+
+        $("#showBtn").click(function () {
+            $("#box").toggle(100);//toggle(파라미터:ms단위)
+        }); //$("#showBtn").click()end
+
+        $("#fadeBtn").click(function () {
+            $("#box").fadeToggle(100);
+        });//$("#fadeBtn").click() end
+
+        $("#slideBtn").click(function () {
+            $("#box").slideToggle(100);
+        });// $("#slideBtn").click() end
+    </script>
+</body>
+</html>

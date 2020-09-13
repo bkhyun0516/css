@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:css" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c561cd6f-4686-42ea-a4fa-57c0c31211c5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../0909/1_0824_실습1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0909/2_주성호의사연.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0909/3_0824_실습2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0909/4_자식_자손선택자.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0909/5_css의구체성(명시도).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0909/6_요소의생성.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0909/7_이펙트예제.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_이미지슬라이드기초.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_margin_auto.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3_if문.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4_정진하씨_사연.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_이미지로테이트.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_input_textarea_select.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8_요소생성추가삭제.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/9_ajax기초.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/movie.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0911/1_ajax기초.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0911/2_json.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0911/3_each메서드.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0911/4_ajax복습.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0911/data/playList.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0911/data/seriesList.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0826_백경현/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../0826_백경현/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0827/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../0827/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0827/5_자바스크립트객체.html" beforeDir="false" afterPath="$PROJECT_DIR$/../0827/5_자바스크립트객체.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0828/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../0828/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0828/1_0827실습문제리뷰.html" beforeDir="false" afterPath="$PROJECT_DIR$/../0828/1_0827실습문제리뷰.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0828/2_박스모델.html" beforeDir="false" afterPath="$PROJECT_DIR$/../0828/2_박스모델.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1hIV693sPlht91bNLUwIsOfiFwy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bkhyu\BMJ\0910" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c561cd6f-4686-42ea-a4fa-57c0c31211c5" name="Default Changelist" comment="" />
+      <created>1599698415345</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599698415345</updated>
+      <workItem from="1599698416444" duration="26037000" />
+      <workItem from="1599784660399" duration="1147000" />
+      <workItem from="1599791840060" duration="617000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="880" y="224" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599714100545">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="880" y="224" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1599714100545" />
+    <state x="910" y="165" key="FileChooserDialogImpl" timestamp="1599785274190">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="910" y="165" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1599785274190" />
+  </component>
+</project>

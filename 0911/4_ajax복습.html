@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax복습</title>
+    <style>
+        #loader {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+
+            background-image: url(img/loader.svg);
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: .5;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<button id="getBtn"> 불러오기</button>
+<h1>내 플레이목록</h1>
+<ul>
+    <li>emptyList</li>
+</ul>
+<div id="loader"></div>
+<script src="js/jquery.js"></script>
+<script>
+    //로더객체 선언
+    const $loader = $("#loader");
+    $("#getBtn").click(function () {
+        //로딩이미지 보여주기
+        $loader.fadeIn();
+        //ajax
+        $.ajax({
+            url:"data/playList.json", //요청하는 서버주소
+            type : "GET",    //클라이언트 -> 서버 GET,POST
+            dataType:"json", //서버 -> 클라이언트 데이터타입
+            error:function (/*xgr,code,type*/) {
+                //xhr: XMLHttpRequest 객체
+                //code :
+                //type :
+                alert("서 버 점 검")
+            }, //
+            success:function (json) {
+                //json: 서버에서 응답 오는 데이터
+                //리스트 전부 비우고
+                $("ul").empty();
+                //해당요소 지우려면
+                //$("li").remove();
+                //리스트 목록 추가
+                $(json).each(function () {
+                    const $li =$("<li>");
+                    const $h2 =$("<h2>").text(this.title);
+                    const $strong =$("<strong>").text("가수 : "+this.singer);
+                    const $em =$("<em>").text("재생시간 : "+this.playTime);
+                    $li.append($h2,$strong,$em)
+                    .appendTo("ul");
+                });//$(json).each() end
+
+                $loader.fadeOut();
+            }
+        });// $.ajax() end
+    });//$("#getBtn").click() end
+</script>
+</body>
+</html>

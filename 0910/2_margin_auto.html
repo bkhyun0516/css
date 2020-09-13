@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>마진 auto값</title>
+    <style>
+        #parent {
+            width: 800px;
+            height: 500px;
+            background-color: silver;
+        }
+        #child {
+            width: 500px;
+            /*
+                width와 margin에 auto를 같이 지정하면
+                width가 이깁니다.
+                하지만 width값을 지정할 경우
+                부모의 width에서 width값을 빼고
+                그 값을 /2해서 margin-left와
+                margin-right가 나눠가집니다.
+
+                결론: 블록레벨의 수평가운데 정렬
+                width값 지정후 margin auto
+
+                margin-top,bottom은 auto값 0
+                margin-left,right 값이 auto일 경우
+            */
+            margin-top: auto;
+            margin-bottom: auto;
+            /*margin left,right는 auto 0인 친구들*/
+            background-color: coral;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+</body>
+</html>

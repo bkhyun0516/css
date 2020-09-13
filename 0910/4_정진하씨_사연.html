@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/all.min.css"/>
+    <style>
+        #wrap{
+            width: 600px;
+            height: 520px;
+            /*margin: auto;*/
+            /*background-color: coral;*/
+            /*position:relative;*/
+            position: fixed;
+            left:50%;
+            top:50%;
+            margin-left:-300px;
+            margin-top:-260px;
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        #kakaoBox {
+            width:480px;
+            height: 500px;
+            border:10px solid #424242;
+            overflow: hidden;
+            /*브라우저 기준 블록레벨 수평 가운데 정렬*/
+            margin:auto;
+            /*포지셔닝 컨텍스트 지정*/
+            position: relative;
+            }
+        #friends {
+            width: 2880px;
+            background-color: lightpink;
+            position:absolute;
+            left:0;
+            transition: .5s cubic-bezier(.31,-0.59,.06,1.27);
+        }
+        /*#prevBtn, #nextBtn*/
+        #prevBtn,#nextBtn {
+            position: absolute;
+            width:50px;
+            height: 50px;
+            border: none;
+            background-color: transparent;
+            font-size: 40px;
+            color: blue;
+            top:235px;
+        }
+        #prevBtn {
+            left: 0;
+        }
+        #nextBtn {
+            right: 0;
+        }
+        .btn:hover{
+            color:black;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <button id="prevBtn"><i class="btn fas fa-arrow-circle-left"></i></button>
+    <button id="nextBtn"><i class="btn fas fa-arrow-circle-right"></i></button>
+    <div id="kakaoBox">
+        <div id="friends">
+            <!--
+                inline level 은 엔터 누르면 개행
+            -->
+            <img src="img/apeach.png"/><!--
+        --><img src="img/frodo.png"/><!--
+        --><img src="img/jayg.png"/><!--
+        --><img src="img/muzi.png"/><!--
+        --><img src="img/neo.png"/><!--
+        --><img src="img/tube.png"/>
+        </div><!-- #friends-->
+    </div><!-- #kakaoBox-->
+</div><!-- #wrap-->
+<script src="js/jquery.js"></script>
+
+<script>
+    let left = 0;
+    $("#nextBtn").click(function () {
+        left += 480;
+        if(){
+            left=-2400;
+        }//if end
+        $("#friends").css("left",left);
+    });//#nextBtn click() end
+
+    $("#prevBtn").click(function () {
+        left -= 480;
+        if(left == -2880) {
+            left = 0;
+        }//if end
+
+        $("#friends").css("left",left);
+
+    });
+</script>
+</body>
+</html>

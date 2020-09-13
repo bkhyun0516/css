@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>밴드 홈 | 밴드</title>
+    <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+<!--
+      블록레벨와 인라인레벨
+      블록레벨안에 인라인 레벨 들어가게 해야한다.
+-->
+//IR(이미지 대체 기법) 생략
+<h1><a href="http://band.us">BAND</a></h1>
+<h2>검색</h2>
+<form action="">
+    <fieldset>
+        <legend>밴드, 페이지, 게시글 검색</legend>
+         <input placeholder="밴드, 페이지, 게시글 검색"
+                title="밴드, 페이지, 게시글 검색"/>
+        <button>검색</button>
+    </fieldset>
+</form>
+<h2>주요서비스</h2>
+<ul>
+<!--    mark 요소 : 강조 기능 -->
+    <li>
+        <a href="">새글 피드 <mark>2</mark></a>
+    </li>
+    <li>
+        <button>새로운 새소식이 3개 있습니다. <mark>3</mark></button>
+    </li>
+    <li>
+        <button><img src="img/12.jpeg" width="30" height="30"/>내정보, 설정, 로그아웃</button>
+        <ul>
+           <li><a href=""> 내 정보</a></li>
+           <li><a href=""> 내가 쓴글</a></li>
+            <li>
+                <ul>
+                    <li><a href="">밴드초대확인</a></li>
+                    <li><a href="">ㅁㅁ</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+<h2>내목록</h2>
+<ul>
+    <li>
+        <a href="">
+            <img src="img/12.jpeg">
+            <h3>BMJ 질문용</h3>
+            <p>멤버 <em>26</em></p>
+        </a>
+    </li>
+</ul>
+<h2>운영정책 및 약관안내</h2>
+<address>
+    <strong>band</strong> &copy; 2020
+</address>
+<!--
+    <script src="js/jquery.js"></script>
+    <script src="js/test.js"></script>
+
+    band는 SPA(Single Page Application)
+    ->app정도 수준의 UX 제공
+    ->페이지 내에서 처리(이동x)
+    Angular
+    React
+    view.js
+    ========
+    webpack(웹팩): 모듈번들러
+-->
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>영화검색</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/notosanskr.css">
+    <style>
+        body{
+            font-family: "Noto Sans KR",sans-serif;
+            position: fixed;
+            text-align: center;
+            width: auto;
+        }
+        table{
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th, td {
+            padding: 8px 12px;
+            font-size:20px;
+            border: 1px solid #424242;
+        }
+        #loader {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+
+            background-image: url(img/loader.svg);
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: .5;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h1><i class="fas fa-film"></i>영화 검색 웹서비스<i class="fas fa-film"></i></h1>
+<p>
+    <input id="q" placeholder="검색할 영화명">
+    <button id="searchBtn">검색</button>
+</p>
+<table>
+    <thead>
+        <tr>
+            <td>영화명</td>
+            <td>감독</td>
+            <td>대표장르</td>
+            <td>개봉일</td>
+            <td>제작사</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="5">검색하랑께~</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <td colspan="5">영화진흥위원회 제공</td>
+    </tfoot>
+</table>
+<div id="loader"></div>
+</body>
+<script src="js/jquery.js"></script>
+<script>
+    calcWidth();
+    function calcWidth() {
+        let body = $("body");
+        let $width =body.css("width");
+        $width *= (-1);
+        body.css("left","40%");
+        body.css("margin-left",`${$width}`);
+    }
+    const $loader = $("#loader");
+    const key ="9e1d66686981108729229f2d0df7e50f";
+    function movieData(title,num) {
+        $loader.show();
+        $.ajax({
+            url:`http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json?key=${key}&movieNm=${title}&itemPerPage=${num}`,
+            error:function () {
+                alert("error~~");
+            },
+            success:function (json) {
+                $("tbody").empty();
+                const movies =json.movieListResult.movieList;
+                console.log(movies);
+                $(movies).each(function () {
+                    const $tr=$("<tr>");
+                    const $td1=$("<td>").text(this.movieNm);
+                    let director = "없음";
+                    if(this.directors.length > 0){
+                        director=this.directors[0].peopleNm;
+                    }//directors배열의 길이가 0보다 크면
+                    const $td2=$("<td>").text(director);
+                    const $td3=$("<td>").text(this.repGenreNm);
+                    let openDt = "없음";
+                    if(this.openDt.length > 0){
+                        openDt=this.openDt;
+                    }//directors배열의 길이가 0보다 크면
+                    const $td4=$("<td>").text(openDt);
+                    let company = "없음";
+                    if(this.companys.length > 0){
+                        company=this.companys[0].companyNm;
+                    }//companys배열의 길이가 0보다 크면
+                    const $td5=$("<td>").text(company);
+                    $tr.append($td1,$td2,$td3,$td4,$td5)
+                        .appendTo("tbody");
+                })
+                $loader.hide();
+            }
+        });//$.ajax()end
+    }//function movieData() end
+    $("#searchBtn").click(function () {
+        const title = $("#q").val();
+        const num = 5;
+        movieData(title,num);
+        $("#q").val("").focus();
+        calcWidth();
+    });//$("#searchBtn").click() end
+</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>submit 이벤트</title>
+</head>
+<body>
+<h1>아주멋진 웹서비스</h1>
+<!--
+1번방법
+<form method="get" action="test.do">
+    <input />
+<button>보내기</button>
+</form>
+
+2번방법
+    HTML5에 추가된 방법으로
+    form 요소의 id 속성을 각 버튼 및 input등에 form속성으로
+    쓸 경우 연결이된다.
+-->
+<form id="joinForm" method="post" action="band.us/search"></form>
+<input id="name" form="joinForm" name="name">
+<button form="joinForm">보내기</button>
+<script src="js/jquery.js"></script>
+<script>
+    // form요소에 submit 이벤트리스너를 붙이는 메소드
+    $("#joinForm").submit(function () {
+        //이벤트핸들러(함수): 리스너가 submit할 때 호출
+        //유저가 입력한 글자 얻어오기
+        /*
+             setter: $("#name").text("sss");
+             getter:  $("#name").text();
+
+            ※input, textarea, select 요소들에서
+            파라미터 값을 얻어오거나 세팅하려면
+            : val 메서드
+         */
+        //1) 유저가 입력한 값을 얻어온다
+        const name = $("#name").val();
+        //2) form 요소에서  action속성값을 얻어온 3)후 /name을 더함
+        const action=$("#joinForm").attr("action") +"/"+ name;
+        //3) form 요소에 action속성값을 세팅
+        $("#joinForm").attr("action",action);
+
+        // alert(action);
+    });//$("#joinForm").submit() end
+</script>
+</body>
+</html>

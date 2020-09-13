@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax의 기초</title>
+    <style>
+        table {
+            margin-top: 10px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        td, th {
+            padding: 10px 12px;
+            border: 1px solid #424242;
+        }
+        #loader {
+            /*브라우저 기준 전체 감싸기*/
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left:0;
+            top:0;
+
+            background-image: url(img/loader.svg);
+            background-position: center;
+            background-color: rgb(255,255,255);
+            background-repeat: no-repeat;
+            opacity: .5;
+            /*로딩이미지 우선 숨김*/
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<h1>아주 재밌는 드라마 목록</h1>
+<button id="getBtn">가져오기</button>
+<table>
+    <thead>
+        <tr>
+            <th>이름</th>
+            <th>첫 방송일</th>
+            <th>제작자</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="3">아직 없다</td>
+        </tr>
+    </tbody>
+</table>
+<div id="loader"></div>
+<script src="js/jquery.js"></script>
+<script>
+    // 로더 jquery객체
+    const $loader=$("#loader");
+    $("#getBtn").click(function () {
+        //1) 로딩이미지 보여준다.
+        $loader.fadeIn();
+        //2) ajax
+        $.ajax({
+            url:"data/seriesList.json",
+            error:function () {
+                alert("서 버 점 검 중!")
+            },
+            success:function (json) {
+                //tr전부비우기
+                $("tbody").empty();
+                $(json).each(function () {
+                    //tr요소
+                    const $tr=$("<tr>");
+                    //td요소
+                    const $td1=$("<td>").text(this.title);
+                    const $td2=$("<td>").text(this.openDate);
+                    const $td3=$("<td>").text(this.director);
+                    // tr에 td에 붙인다.
+                    $tr.append($td1,$td2,$td3)
+                        .appendTo("tbody");
+                });//$(json).each() end
+                //로딩이미지 제거
+                $loader.fadeOut();
+            }
+        });
+    });//$("#getBtn").click() end
+
+    /*
+        ajax란 페이지 전체 리프레시 업싱
+        특정 페이지만 갱신시키는 기술
+        (서버에서 받은 정보를 가지고)
+
+        클라이언트 -> 서버 : 쿼리스트링(파라미터s = 명+값)
+        서버 -> 클라이언트 : json(과거 스타일 XML)
+     */
+</script>
+
+</body>
+</html>

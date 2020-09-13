@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>each메서드</title>
+</head>
+<body>
+<script src="js/jquery.js"></script>
+<script>
+    const bts =["RM","슈가","진","정국","지민","제이홉","뷔"]
+
+    $.each(bts,function (idx) {
+        //각각 번지에 있는 값(객체,문자열...) : this
+        alert(idx+"번째 "+ this);
+    });//$.each() end
+
+    $(bts).each(function (idx) {
+        alert(idx+"번째 "+this);
+    })
+    /*
+            $.each(배열,함수)
+            $(배열).each(함수)
+     */
+</script>
+</body>
+</html>

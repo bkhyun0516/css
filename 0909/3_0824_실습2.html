@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>0824 실습2번 리뷰</title>
+    <!--외부 css   -->
+    <link rel="stylesheet" href="css/all.min.css"/>
+    <link rel="stylesheet" href="css/notosanskr.css" />
+    <!--내부css    -->
+    <style>
+        body {
+            /*대표패밀리 설정*/
+            font-family: "Noto Sans KR",sans-serif;
+        }
+        h1 {
+            font-weight: 900;
+        }
+        .tab{
+            width: 150px;
+            height: 60px;
+            background-color: #B388FF;
+            text-align: center;
+            line-height: 60px;
+            color: #fff;
+            font-weight: 700;
+            text-shadow: 2px 2px 2px #424242;
+            border: 7px solid #7C4DFF;
+            border-radius: 20px 20px 0 0;
+            /*margin-bottom: -7px;*/
+            border-bottom: none;
+        }
+        .box {
+            width: 400px;
+            background-color: #B39DDB;
+            padding: 20px;
+            border: 7px solid #7C4DFF;
+            border-radius: 0 20px 20px 20px;
+            font-weight: 200;
+            /*글자를 양쪽으로 정렬하여 보기 편하게 -> 단맞춤 */
+            text-align: justify;
+        }
+        #triangle {
+            /*
+                width, height  기본값 auto
+                width auto는 부모에게 상속
+                height auto는 자식들의 height의 합
+            */
+            width: 0;
+            height: 0;
+            /*background-color: red;*/
+            /*border-left:100px solid blue;*/
+            /*border-bottom:100px solid yellow;*/
+            /*border-right:100px solid green;*/
+            border-left:60px solid transparent;
+            border-bottom:100px solid yellow;
+            border-right:60px solid transparent;
+        }
+        #profileBox{
+            width: 200px;
+            height:200px;
+            border: 10px solid #424242;
+            padding: 20px;
+            /*박스모델 너비 260px*/
+            text-align: center;
+        }
+        /* ' '자손선택자, '>' 자식선택자*/
+        #profileBox img{
+            border:10px solid #424242;
+            width: 150px;
+            border-radius: 85px;
+        }
+        #profileBox h3{
+            margin: 5px 0 0 0;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1><i class="fab fa-centos"></i> 0824실습 2</h1>
+    <!--
+        가상선택자에는 가상클래스 선택자와 가상 요소선택자가 있다
+        HTML에 이미 존재하는 요소를 선택하면 가상 클래스 선택자
+        HTML에 존재하지는 않지만 가상의요소를 생성하여 선택하는것은 가상 요소 선택자
+        가상클래스가 가상요소보다 구체성이 높다
+        ':' :가상 클래스 선택자
+       '::' :가상요소 선택자
+        <h1 class="fab fa-centos"> 0824실습 2</h1>
+        요렇게 하면 폰트어썸의 폰트패밀리 따라감
+     -->
+   <div class="tab">텝1</div>
+    <!--쓸모없는 글자는 로렘 입숨   -->
+   <div class="box">충분히 천지는 같이, 광야에서 것이다. 불어 소금이라 인생을 그리하였는가? 위하여 반짝이는 되려니와, 구할 원대하고, 때문이다. 타오르고 행복스럽고 가치를 물방아 것은 대고, 튼튼하며, 그것을 봄바람이다. 있을 품에 것이다.보라, 얼음과 있으며, 자신과 피가 하여도 만천하의 듣는다. 품에 이상이 안고, 풀밭에 영락과 사막이다. 눈에 주는 사랑의 이는 봄바람이다. 평화스러운 두손을 보이는 놀이 너의 뜨거운지라, 사막이다. 아니더면, 지혜는 따뜻한 그리하였는가?</div>
+    <hr/>
+    <div id="triangle"></div>
+    <hr />
+    <h2>프로필 만들기</h2>
+    <!--
+        클래스는 언더바 표기법
+        아이디 나머지등은 낙타 표기법하자
+    -->
+    <div id="profileBox">
+       <img src="img/12.jpeg" id="profile"/>
+        <h3><i class="fas fa-user-circle"></i> 김아무개</h3>
+    </div>
+</body>
+</html>

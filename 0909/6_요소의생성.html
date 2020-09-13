@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>요소의 생성</title>
+    <style>
+        #box {
+            margin-top: 10px;
+            width: 400px;
+            min-height: 300px; /*최소높이*/
+            background-color: #B388FF;
+            padding: 20px;
+        }
+        table {
+            border-collapse: collapse;/*간격없앤다*/
+        }
+        td {
+            border: 1px solid #fff;
+            padding: 10px 14px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">생성!</button>
+    <div id="box">
+<!--
+        <table>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+        </table>
+-->
+    </div>
+    <script src="js/jquery.js"></script>
+    <script>
+        $("#btn").click(function () {
+            //table요소 생성
+            const $table =$("<table><tbody></tbody></table>");
+
+            // 1번쨰 tr요소 생성
+            const $tr1 =$("<tr><td>1</td><td>2</td></tr>");
+            /*
+            //1번째 tr을 table요소에 붙임
+            $table.append($tr1);
+            //table을 #box에 붙임
+            $("#box").append($table);
+            */
+            //2번째 tr요소 생성
+            const $tr2 = $("<tr>");
+            /*
+                같은 의미
+                1) const $tr2 = $("<tr>");
+                2) const $tr2 = $("<tr/>");
+                3) const $tr2 = $("<tr><tr/>");
+            */
+            //3번 td
+            const $td3 = $("<td>3</td>");
+            //4번 td
+            const $td4 = $("<td>").text(4);
+
+            //2번째 tr에 td3, td4 결합
+            $tr2.append($td3,$td4);
+            //table에 tr1, tr2 붙임
+            $table.append($tr1,$tr2);
+            //#box에  테이블 붙임
+            $("#box").append($table);
+            //const $table = $("<table><tbody><tr><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td></tr></tbody></table>");
+            //$("#box").append($table);
+            /*
+                table 1개
+                tbody 1개
+                tr 2개
+                td 2개
+            */
+
+        /*
+               $("img"): DOM 안에 img요소를 선택한것
+               $("<img>"): img요소객체생성
+
+              요소에 붙이는 메서드
+               1) 부모.append(자식)
+
+         */
+            // const $img = $("<img src='img/pizza.jpg'>");
+            // const $img= $("<img>").attr("src","img/pizza.jpg")
+            // $("#box").append($img);
+            //json = 배열 + 객체
+        });
+    </script>
+</body>
+</html>

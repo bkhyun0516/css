@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax의 기초</title>
+</head>
+<body>
+<script src="js/jquery.js"></script>
+<script>
+
+    /*
+       $.ajax(옵션객체); 이용하여 ajax
+
+        옵션객체의 주요속성
+        - url: 서버주소(필수)
+        - error: 에러가 발생했을때 호출되는 함수(콜백)
+        - success: 성공했을때 호출되는 함수(콜백)
+    */
+    $.ajax({url:"http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=430156241533f1d058c603178cc3ca0e&targetDt=20200909",
+        error: function() {
+            alert("실패");
+        },
+        success: function(json) {
+            console.log(json);
+            alert("성공");
+        }
+    });
+
+    /*
+        순수자바스크립트 API를 이용하여
+        Ajax를 개발하는것은 복잡하다.
+    */
+ /*
+    XML(eXtensible Markup Language)
+    (확장가능한 마크업 언어)
+    ->요소 맘대로 만들어 쓴다다
+
+   ajax(Asynchronous Javascript And XML)
+    비동기통신의 자바스크립트 그리고 XML
+
+    XMLHTTPRequest 객체가 요청 / 응답(익스플로러 6);
+
+    F12 XHR이 AJAX부분 보여준다.
+
+    ajax란 전체 페이지 새로고침없이
+    페이지의 특정부분만 업데이트 시키는 기술
+*/
+</script>
+</body>
+</html>
