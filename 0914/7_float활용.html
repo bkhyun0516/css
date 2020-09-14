@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>float의 활용</title>
+    <style>
+        #parent {
+            width: 300px;
+            border: 5px solid plum;
+            /*height: 100px;*/
+            overflow: hidden; /*height를 알아낸다고 함...*/
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            float: left;
+        /*
+            float의 문제점
+            - 공간을 차지하지 않기 때문에 부모의 height 값이 0이 된다.
+
+            해결책
+            - 부모에 height값 지정(40~45%)
+            - height값을 고정하지 못할 경우
+               -> 부모에 overflow 속성을 지정
+               -> float이 끝나는 다음 형제(얘는 float아니어여한다.)에 clear:both
+           - 가상 요소를 활용하여 clear:both 지정
+
+        */
+        }
+        #red {
+            background: red;
+        }
+        #blue {
+            background: blue;
+        }
+        #green {
+            background: green;
+        }
+        /*#orange {*/
+        /*    width: 300px;*/
+        /*    height: 100px;*/
+        /*    background: yellow;*/
+        /*    !*clear: both;*!*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div id="parent">
+    <div id="red" class="box"></div>
+    <div id="blue" class="box"></div>
+    <div id="green" class="box"></div>
+    <div id="orange"></div>
+</div>
+<h1 id="test">아래쪽에 다른 박스가 있다..</h1>
+</body>
+</html>

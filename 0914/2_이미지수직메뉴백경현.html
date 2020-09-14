@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이미지수직메뉴</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <style>
+        #GNB {
+            background: antiquewhite;
+            width: 300px;
+            height: 400px;
+            margin: auto;
+        }
+        #GNB ul {
+            list-style: none;
+        }
+        #GNB li {
+            width: 300px;
+            height: 100px;
+            transition: .2s ease;
+        }
+        #GNB a {
+            width: 300px;
+            height: 100px;
+            display: block;
+            overflow: hidden;
+            text-indent: -9999px;
+        }
+        #GNB li:nth-child(1){
+            background-image: url(img/mail_a.gif);
+        }
+        #GNB li:nth-child(2){
+            background-image: url(img/cafe_a.gif);
+        }
+        #GNB li:nth-child(3){
+            background-image: url(img/blog_a.gif);
+        }
+        #GNB li:nth-child(4){
+            background-image: url(img/kin_a.gif);
+        }
+        #GNB li:hover{
+            background-position: 0 -100px;
+        }
+        #GNB li:active{
+            background-position: 0 100px;
+            box-shadow: inset 0 0 20px #424242;
+        }
+    </style>
+</head>
+<body>
+<div id="GNB">
+    <h2 class="screen_out">주요서비스</h2>
+    <ul>
+        <!--  협업 작성시 꼬이는것을 고려하여 id 보다 class 사용한다.        -->
+        <li class="mail"><a href="https://mail.naver.com/" target="_blank">메 일 </a></li>
+        <li class="cafe"><a href="https://section.cafe.naver.com/" target="_blank">카 페</a></li>
+        <li class="blog"><a href="https://section.blog.naver.com/BlogHome.nhn?directoryNo=0&currentPage=1&groupId=0" target="_blank">블로그</a></li>
+        <li class="kin"><a href="https://kin.naver.com/" target="_blank">지식인</a></li>
+    </ul>
+</div> <!-- GNB END-->
+</body>
+</html>

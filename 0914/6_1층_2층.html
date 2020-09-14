@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>1층 2층</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font-weight: 900;
+        }
+        #red{
+            background: red;
+            /*position: relative;*/
+            /*float:left;*/
+        }
+        #blue{
+            background: blue;
+            margin-left: 100px;
+            /*마진의 음수값으로 겹친다.*/
+            margin-top: -50px;
+        }
+        span {
+            font-size: 60px;
+            padding: 30px 0;
+            /*display: none;*/
+        }
+        #red span {
+            background: green;
+        }
+        #blue span{
+            background: orange;
+        }
+    /*
+          같은 층에 있을 경우 코딩상 아래에 나오는 게 적용
+    */
+    </style>
+</head>
+<body>
+<div id="red">
+    <span>가나다</span>
+</div>
+<div id="blue">
+    <span>다라마</span>
+</div>
+</body>
+</html>

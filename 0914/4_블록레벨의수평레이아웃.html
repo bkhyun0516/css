@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>블록레벨의 수평 레이아웃</title>
+    <style>
+        .box {
+            width: 900px;
+            background:silver;
+            opacity: .5;
+            overflow: hidden;
+            /*height: 120px;*/
+        /*
+            1. overflow hidden
+            2. height 지정
+            3
+        */
+        }
+        .box div {
+            width: 160px;
+            height: 120px;
+            background-size: 100% 100%;
+            /*
+                블록레벨 수평
+                1) float
+                2) display:inline-block
+                3) flex-box
+            */
+            float: left;
+            /*
+                레이아웃에 문제생김
+
+            */
+            /*display: inline-block;*/
+            /*     -> enter값도 들어감 */
+        }
+        .box div:nth-child(1){background-image: url(img/c1.jpg);}
+        .box div:nth-child(2){background-image: url(img/c2.jpg);}
+        .box div:nth-child(3){background-image: url(img/c3.jpg);}
+        .box div:nth-child(4){background-image: url(img/c4.jpg);}
+        .box div:nth-child(5){background-image: url(img/c5.jpg);}
+        /*.clear {*/
+        /*    clear:both;*/
+        /*    float:none;*/
+        /*}*/
+        h1{
+            background: red;
+        }
+    /*
+        가상요소에는 content 속성필요
+        가상요소 inline
+    */
+        .box:after {
+            content:"";
+            display: block;
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+<!--    <div class="clear"></div>-->
+</div>
+<h1>엄청큰 문제가 생겨요!!</h1>
+<!--
+    블록레벨은 줄바꿈이 일어납니다.
+    기본적으로는 수직레이아웃
+
+    그런데 웹서비스에서는 수평인 경우가 정말 많습니다.
+
+    블록레벨의 수평레이아웃 방법
+    1) float(초반)
+        원래는 레이아웃 용이 아니였다.....
+    2) inline-block(2010년 대 부터 : 익스플러러 8부터 적용)
+
+    3) flex-box(CSS3이고 최신인데 데스크탑웹에서는
+                브라우저중에 적용안되는 경우도 있어서
+                수업때는 얘기를 안 할 예정)
+
+-->
+</body>
+</html>
