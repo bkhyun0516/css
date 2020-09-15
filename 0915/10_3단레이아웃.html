@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>3단레이아웃</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+</head>
+<style>
+    #wrap{
+        width: 1100px;
+        border: 1px solid black;
+        margin:auto;
+    }
+    #header{
+        width: 1100px;
+        height: 100px;
+        background-color: #757575;
+        margin-bottom: 20px;
+    }
+    #info{
+        width: 280px;
+        height: 500px;
+        background-color:#81D4FA;
+        float: left;
+    }
+    #contents{
+        width: 500px;
+        height: 500px;
+        background-color:#FFF176;
+        float: left;
+        margin: 0 20px 20px 20px;
+    }
+    #sidebar{
+        width: 280px;
+        height: 500px;
+        background-color:#EEEEEE;
+        float: left;
+    }
+    #footer{
+        width: 1100px;
+        height: 100px;
+        background-color: #F48FB1;
+        clear: both;
+    }
+</style>
+<body>
+<div id="wrap">
+    <div id="header"></div>
+    <div id="info"></div>
+    <div id="contents"></div>
+    <div id="sidebar"></div>
+    <div id="footer"></div>
+</div><!-- //wrap-->
+</body>
+</html>

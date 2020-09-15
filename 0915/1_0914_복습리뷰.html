@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>수평메뉴 복습</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <style>
+        #box {
+            width: 588px;
+            height: 170px;
+            border: 10px solid #777;
+            position:fixed;
+            left:50%;
+            top:50%;
+            margin: -95px 0 0 -304px; /*박스모델 크기로 생각해야된다 보더 꼭 생각하자*/
+            overflow: hidden;
+        }
+        #box li {
+            width: 147px;
+            height: 170px;
+            float:left;
+            /*background: #0f4c82;*/
+        }
+        #box li>a {
+            width: 127px;
+            height: 150px;
+            display: block;
+            border: 10px solid transparent;
+            transition: 1s ease;
+        }
+        #box li>a:hover {
+            border-color: #000;
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            /*transform: scale(1.1);*/
+        }
+        #box li>a:hover img {
+            transition: 1.5s ease;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <h2 class="screen_out">카카오 메뉴</h2>
+    <ul>
+        <li><a href=""><img src="img/footer_face01.gif"></a></li>
+        <li><a href=""><img src="img/footer_face02.gif"></a></li>
+        <li><a href=""><img src="img/footer_face05.gif"></a></li>
+        <li><a href=""><img src="img/footer_face07.gif"></a></li>
+<!--
+    img 127px 150px
+    a 127px 150px
+    li 147px 170px
+    box 588px 170px 10px
+-->
+    </ul>
+</div>
+</body>
+</html>

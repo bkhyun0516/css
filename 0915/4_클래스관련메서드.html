@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>클래스 관련 메서드</title>
+    <style>
+        #toggleBtn{
+            margin-bottom: 20px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background: lightskyblue;
+        }
+        .circle {
+            border-radius: 50%;
+            background: plum;
+        }
+    </style>
+</head>
+<body>
+<button id="toggleBtn">붙였다때기</button>
+<div class="box"></div>
+<script src="js/jquery.js"></script>
+<script>
+    /*
+        클래스 관련 메서드
+        - addClass(클래스명) :  해당 클래스를 추가
+        - removeClass(클래스명): 해당클래스명만 제거
+        - hasClass(클래스명): 해당클래스를 가지고 있다면 True
+                                                   없다면 False
+        - toggleClass(클래스명) :
+
+       text()
+        css()
+        val()
+        attr("class","box")
+     */
+   // $("#toggleBtn").click(function () {});
+    /*
+          on(이벤트명,함수):이벤트리스너를 붙인다.
+     */
+
+    $("#toggleBtn").on("click",function () {   //클래스가 box인 div요소를 선택한 후
+        // circle클래스 추가
+        const $box=$(".box");
+        $box.toggleClass("circle");
+
+        // if($box.hasClass("circle")){
+        //     //circle 있으니까 제거
+        //     $box.removeClass("circle");
+        // }else{
+        //     //circle 없으니까 추가
+        //     $box.addClass("circle");
+        //     /*
+        //         $(".box").attr("class","circle"); 는 왜 안되나..
+        //         기존의 box클래스를 날려버려고 circle 클래스만 보유
+        //         따라서 width, height 도 사라진다.
+        //         $(".box").attr("class","box circle");
+        //     */
+        // }//if~else end
+
+    });// $("#toggleBtn").on() end
+
+</script>
+</body>
+</html>

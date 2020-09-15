@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>글자상속</title>
+    <style>
+        @font-face {
+            font-family: 'ImcreSoojin';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: 'ImcreSoojin',Serif;
+        }
+        input, textarea, select, button {
+            font-family: ImcreSoojin,Serif;
+            font-size: 20px;
+        }/*따로 따로 해줘야함*/
+        textarea {
+        /*    textarea 크기 변경 못하게*/
+            resize:none;
+        }
+    </style>
+</head>
+<body>
+<h1>나는 무슨 폰트?</h1>
+<p>무슨 폰트?</p>
+<div>나는 무슨무슨 폰트일까?</div>
+<em>다 적용됨</em>
+<strong>여기까지</strong>
+<hr/>
+<!-- 대체되는 요소들은 폰트가 상속이 안된다.-->
+
+<button>버버버버버튼</button>
+<input>
+<textarea></textarea>
+<select>
+    <option>한국</option>
+    <option>영국</option>
+    <option>가나</option>
+    <option>프랑스</option>
+    <option>인도네시아</option>
+</select>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>요소관련복습</title>
+    <style>
+        html{
+            cursor: crosshair;
+        }
+        .circle{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            text-align: center;
+            color:white;
+            font-size: 50px;
+            position:fixed;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+<script src="js/jquery.js"></script>
+<script>
+    let num=0;
+    function randomColor(){
+     const r=Math.floor(Math.random()*256);
+     const g=Math.floor(Math.random()*256);
+     const b=Math.floor(Math.random()*256);
+     return "rgb("+r+","+g+","+b+")";
+    }
+    function randomSize(){
+        const size = Math.floor(Math.random()*200)+100;
+        return size;
+    }
+
+    $("html").click(function (e) {
+        const x = e.clientX;
+        const y = e.clientY;
+        const Size=randomSize();
+        const fontSize=0.5*Size;
+        const newCircle= $("<div>").addClass("circle");
+        newCircle.text(++num).css({
+            backgroundColor:randomColor(),
+            width:Size,
+            height:Size,
+            fontSize:`${fontSize}px`,
+            lineHeight:`${Size}px`,
+            transform:"translate("+x+","+y+")",
+            left: x,
+            top: y,
+            marginLeft: -1*Size/2,
+            marginTop:-1*Size/2,
+        });
+        $(newCircle).appendTo("body");
+
+    });//$(html).click() end;
+</script>
+</body>
+</html>

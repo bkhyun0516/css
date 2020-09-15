@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>data-속성</title>
+</head>
+<body>
+<!--
+    data-속성: 요소안에 데이터를 삽입하기 위해서
+    (HTML5에 추가된 표준속성)
+
+-->
+<img src="img/c1.jpg" width="160px" data-name="Aston Martin DBX" data-no="78" data-car-type="SUV"/>
+<img src="img/c2.jpg" width="160px" data-name="Maserati MC20" data-no="102" data-car-type="Coupe"/>
+<img src="img/c3.jpg" width="160px" data-name="BMW M8 Competition Coupe" data-no="115" data-car-type="Coupe"/>
+<img src="img/c4.jpg" width="160px" data-name="Porsche 911 Carrera 4s" data-no="124" data-car-type="Sedan"/>
+<img src="img/c5.jpg" width="160px" data-name="Mercedes benz S Class" data-no="159" data-car-type="Sedan"/>
+<script src="js/jquery.js"></script>
+<script>
+
+    /*
+           데이터베이스의 값을 넣는것이 아닌
+           데이터베이스의 값도 넣을 수 있다.
+
+     */
+    $("img").on("click",function () {
+        /*
+            1)HTML5(순수자바스크립트):dataset.명
+
+            2)attr("명") :
+
+            3)data("명") :
+         */
+        console.log(this.dataset);
+        // 순수자바스크립트 API 활용
+        //const no = this.dataset.name;
+
+
+        //jquery의 attr메서드 사용
+        //const no = $(this).attr("data-name"); // this는 순수 자바스크립트 객체 여서 $()안에 넣어준다.
+
+
+        //jquery의 data메서드 사용
+        //const no =$(this).data("name");
+        //alert(no);
+
+
+         const carType =this.dataset.carType; //data-car-type => carType
+         alert(carType);
+
+    });//$("img").on()end
+</script>
+
+<!--
+    폼에서 보이지 않는 정보 넘길때는
+    <input type="hidden">
+-->
+</body>
+</html>
