@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>공간유무 및 ㅊㅇ</title>
+    <style>
+        #parent{
+            width: 600px;
+            height: 400px;
+            background-color: silver;
+        }
+        #this {
+            width: 300px;
+            /*margin: auto;*/
+            background-color: plum;
+            /*
+            공간을 차지 하지 않는 요소
+            - absolute, fixed
+            - float 지정
+            - width가 auto일 때 자식의 width와 동일
+            -> margin auto 일 때 가운데 처리 불가 함!
+            ==============================================================
+                relative: 부모와 형제들에 상대적인!
+                           박스모델의 개념이 다들어간다.
+                            단지 층수가 3층이 되었을 뿐
+             */
+            /*position: relative;*/
+            /*position: absolute; !*부모를 몰라본다-> 자식의 크기와 동일해진다.*!*/
+            position: fixed; /*부모를 몰라본다-> 자식의 크기와 동일해진다.*/
+            /*float:left;*/
+        }
+        #child {
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+        }
+        #box{
+            width: 150px;
+            height: 100px;
+            background-color: #00E657;
+            /*clear: both;*/
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="this">
+            <div id="child"></div> <!--#child-->
+        </div> <!--#this-->
+        <div id="box"></div><!--#box-->
+    </div> <!--#parent->
+</body>
+</html>

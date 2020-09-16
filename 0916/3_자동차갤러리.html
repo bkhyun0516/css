@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>멋진자동차갤러리</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/notosanskr.css"/>
+    <link rel="stylesheet" href="css/all.min.css"/>
+    <style>
+        body {
+            font-family: "Noto Sans KR",sans-serif;
+        }
+        #wrap {
+            width: 1000px;
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin: auto;
+            /*border: 1px solid red;*/
+            overflow: hidden;
+        }
+        #wrap h1 {
+            font-weight: 900;
+            font-size: 40px;
+            text-align: center;
+            margin:20px 0;
+        }
+        #carBox{
+            width: 800px;
+            height: 600px;
+            background-color: lightskyblue;
+            border: 10px solid #ffffff;
+            margin: auto;
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        #carListBox {
+            /*width:900px;*/
+            width:900px;
+            height:140px;
+            margin:20px auto;/*margin auto와 top 20px 동시에*/
+        }
+        #carListBox li {
+            width:180px;
+            height: 140px;
+            float:left;
+        }
+        #carListBox a{
+            width:160px;
+            height: 120px;
+            border: 10px solid #fff;
+            display: block;
+            opacity: .5;
+            transition: .2s ease;
+            overflow:hidden;
+        }
+        #carListBox a:hover{
+            opacity: 1;
+            border-color: #424242;
+        }
+        #carListBox img{
+            transition: .3s ease;
+        }
+        #carListBox a:hover img{
+            transform: scale(1.2) ;
+        }
+        #black {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: .7;
+            position:fixed;
+            left:0;
+            top:0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="black"></div>
+<div id="wrap">
+    <h1><i class="fas fa-car"></i>멋진 자동차 갤러리</h1>
+    <div id="carBox">
+        <h2 class="screen_out">상세 자동차 이미지</h2>
+        <!-- 이미지 자체가 컨텐츠기 때문에 background-image 말고 img 요소 샤용-->
+        <img src="img/no_image.jpg"
+             title="아래의 자동차 이미지에 마우스를 가져가 보세요"
+             alt="아래의 자동차 이미지에 마우스를 가져가 보세요" />
+    </div><!--#carBox-->
+    <div id="carListBox">
+        <h2 class="screen_out">자동차 이미지 목록</h2>
+        <ul>
+            <li><a href="">
+                <img src="img/c1.jpg" width="160" alt="Aston Martin DBX"/></a>
+            </li>
+            <li><a href="">
+                <img src="img/c2.jpg"  width="160" alt="Maserati MC20"/></a>
+            </li>
+            <li><a href="">
+                <img src="img/c3.jpg"  width="160" alt ="BMW M8 Competition"/></a>
+            </li>
+            <li><a href="">
+                <img src="img/c4.jpg" width="160" alt="Porsche 911"/></a>
+            </li>
+            <li><a href="">
+                <img src="img/c5.jpg" width="160" alt="Mercedes Benz S Class"/></a>
+            </li>
+        </ul>
+    </div><!--#carBox-->
+</div><!-- #wrap end-->
+<script src="js/jquery.js"></script>
+<script>
+    $("#carListBox img").on("mouseenter",function (e) {
+        //a 요소 링크이동 막기
+        e.preventDefault();
+        //선택한 이미지에서 src, alt 가져오기
+        const src=$(this).attr("src");
+        const alt=$(this).attr("alt");
+        //가져온 데이터 target 이미지에 넣기
+        $("#carBox img").attr({
+            "src":src,
+            "alt":alt,
+            "title":alt,
+            "width": "800px"
+        });
+        $("#black").show();
+        $("#carBox img").css("position","relative");
+    });//$("#carListBox img").on() end
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>마진겹칩</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        ul {
+            width: 200px;
+            background-color: #fff59D;
+            /*border: 1px solid black;*/
+            /*overflow: hidden;*/
+        }
+        li {
+            background-color: lightskyblue;
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            margin:10px 0;
+            /*float:left*/
+            /*
+                마진겹침현상이란
+                - 형제들간의 블록레벨에서
+                  마진이 겹쳐짐 (float은 겹침 없음)
+                - 조상과 자손간에도 마진이 겹쳐짐
+                해결책 : overfloq 속성 지정하거나
+                         위를 막으면 됨(border, padding 지정
+
+                마진 겹칩현상 없는 friends들
+                float
+                absolute, fixed
+             */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>리스트1</li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+        <li>리스트4</li>
+    </ul>
+</body>
+</html>

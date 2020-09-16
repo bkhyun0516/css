@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>카카오프렌즈 이름 맞추기</title>
+        <!--	브라우저 자체 CSS 초기화		-->
+        <link rel="stylesheet" href="css/reset.css" />
+        <!--	폰트어썸 파일 import		-->
+        <link rel="stylesheet" href="css/all.min.css" />
+        <!--	Noto Sans KR 폰트 파일 import		-->
+        <link rel="stylesheet" href="css/notosanskr.css" />
+        <style>
+            #wrap {
+                /*크기 너비 보더 그림자효과 설정*/
+                width: 1000px;
+                height: 600px;
+                border: 10px solid #000;
+                box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+                /*브라우저 기준 수평수직 가운데 정렬*/
+                position: fixed;
+                left: 50%;
+                top: 50%;
+                margin: -310px 0 0 -510px;
+                /*폰트 지정*/
+                font-family: "Noto Sans KR",sans-serif;
+                /*텍스트 수평 가운데 정렬*/
+                text-align: center;
+            }
+            #wrap h1 {
+                /*폰트 상세설정(굵기,크기)*/
+                font-weight: 900;
+                font-size: 50px;
+                /*마진 설정*/
+                margin: 30px;
+                /*텍스트 색상지정*/
+                color:saddlebrown;
+                /*사용자 선택 불가*/
+                user-select: none;
+            }
+            #imgBox {
+                /*너비 높이*/
+                width:600px;
+                height: 340px;
+                /*현재 문제로 나온 이미지만 보이도록 함*/
+                overflow: hidden;
+                position:relative;
+                /* 마진 설정*/
+                margin: 30px auto;
+                /*사용자 선택 불가*/
+                user-select: none;
+            }
+            #imgs{
+                /*top속성 변화를 위한 포지션 설정*/
+                position:absolute;
+                /* 트랜지션 효과 설정*/
+                transition: 1s cubic-bezier(.35,-0.59,.64,1.5);
+            }
+            #nameBox {
+                /*너비 높이 설정*/
+                width: 700px;
+                height: 80px;
+                /*wrap기준 수평 가운데 정렬*/
+                margin: auto;
+                overflow: hidden;
+            }
+            #nameBox li{
+                /*크기 설정*/
+                width: 80px;
+                height: 60px;
+                /*수평 설정*/
+                float: left;
+                /*마진설정*/
+                margin: 10px;
+            }
+            #nameBox a{
+                /*너비 높이 설정*/
+                width: 80px;
+                height: 60px;
+                /*텍스트 수직 가운데 정렬*/
+                line-height: 60px;
+                /*폰트 크기 굵기 설정*/
+                font-size: 20px;
+                font-weight: 700;
+                /*텍스트 색상 설정*/
+                color: black;
+                /*뒷배경색 설정*/
+                background-color: #FFC107;
+                /*밑줄 해제*/
+                text-decoration: none;
+                /*블록레벨 설정*/
+                display: block;
+                /*트랜지션 효과 지정*/
+                transition: .2s ease;
+            }
+            /*오버시 */
+            #nameBox a:hover{
+                /*텍스트, 뒷배경 색상 변화*/
+                background-color:saddlebrown;
+                color: white;
+            }
+        </style>
+	</head>
+	<body>
+		<div id="wrap">
+			<h1><i class="fa fa-comment"></i> 카카오 프렌즈 이름 맞추기</h1>
+			<div id="imgBox">
+                <div id="imgs">
+                    <img src="img/k1.png" alt="무지"/>
+                    <img src="img/k2.png" alt="어피치"/>
+                    <img src="img/k3.png" alt="제이지"/>
+                    <img src="img/k4.png" alt="프로도"/>
+                    <img src="img/k5.png" alt="네오"/>
+                    <img src="img/k6.png" alt="튜브"/>
+                    <img src="img/k7.png" alt="라이언"/>
+                </div><!--//#imgs -->    
+			</div><!--//#imgBox -->
+            <div id="nameBox">
+                <h2 class="screen_out">카카오프렌즈 이름들</h2>
+                <ul>
+                    <li><a href="">무지</a></li>
+                    <li><a href="">어피치</a></li>
+                    <li><a href="">제이지</a></li>
+                    <li><a href="">프로도</a></li>
+                    <li><a href="">네오</a></li>
+                    <li><a href="">튜브</a></li>
+                    <li><a href="">라이언</a></li>
+                </ul>
+            </div><!--//#nameBox -->
+		</div><!--//wrap -->
+		<script src="js/jquery.js"></script>
+    <script>
+        /*
+            0~6까지의 랜덤 숫자를 뽑아내는 함수
+         */
+        function getRandomNumber() {
+            const num = Math.floor(Math.random()*7);
+            return num;
+        }
+        //맨처음 초기 정답
+        let num=getRandomNumber();
+        let index= (-340*num);
+        //#imgs 객체 생성
+        const imgs = $("#imgs");
+        //정답에 맞춘 초기 이미지 구성
+        imgs.css("top",index);
+        //네임박스 클릭시
+        $("#nameBox a").click(function (e) {
+            //a요소 링크이동 방지
+            e.preventDefault()
+            //정답
+            const answer=$("#imgs img").eq(num).attr("alt");
+            //내 선택
+            const myPick=$(this).text();
+            if(answer != myPick){//다를시
+                alert("오답입니다 ㅠ-ㅠ");
+            }else{//같을시
+                alert("정답입니다.");
+                num=getRandomNumber();//새로운 정답
+                index= -(340*num);
+                imgs.css("top",index);//이미지 변화
+            }//if~else end
+
+        });//  $("#nameBox a").click() end;
+    </script>
+	</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>0915복습</title>
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            height: 100%;
+            margin:0;
+            /*
+                body요소의 뒷배경은 옛날과의 호환 때문에
+                무조건 브라우저 크기 만큼의 뒷배경을 가지지만
+                실제크기는 그렇지 않다.(따로 지정하지 않는경우)
+            */
+            background-color: blanchedalmond;
+            cursor:crosshair;
+        }
+        /*
+           공간 차지 않는 친구들 / margin:auto 안먹힌다.
+           float: 2층
+           absolute: 3층
+            fixed: 3층
+            ============================
+            예외  / margin:auto 먹힌다.
+            relative: 3층 (공간이 없어지지는 않는데 3층으로 띄운다.
+        */
+        .circle{
+            /*랜덤하게 변경되는 것*/
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            left: 0;
+            top: 0;
+            margin-left:0;
+            margin-top:0;
+            line-height: 100px;
+            font-size: 50px;
+
+            /*변경되지 않는 것 */
+            border-radius: 50% 50%;
+            position:fixed;
+            text-align: center;
+            /*박스 쉐도우 2단계*/
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            color:#ffffff;
+            text-shadow: 0 0 2px #424242;
+            font-weight: bold;
+            font-family: Arial,sans-serif;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+
+<script src="js/jquery.js"></script>
+<script>
+    let num=1;
+    //임의 색상 얻는 함수
+    function getRandomColor(){
+        const r = Math.floor(Math.random()*256);
+        const g = Math.floor(Math.random()*256);
+        const b = Math.floor(Math.random()*256);
+        return `rgb(${r},${g},${b})`
+    }
+
+
+    $("body").on("mousemove",function (e) {
+        //width 와 height
+        const size=Math.floor(Math.random()*121)+30;
+        //X,Y 좌표
+        const x = e.clientX-size/2;
+        const y = e.clientY-size/2;
+        //요소 생성.CSS변경.붙이기
+        $("<div class='circle'>").text(num++)
+                                .css({
+                                    width:size,
+                                    height:size,
+                                    lineHeight:size+"px",
+                                    left: x,
+                                    top: y,
+                                    background:getRandomColor(),
+                                    fontSize:size/2
+                                }).appendTo("body");
+    })//body.on()  end
+</script>
+</body>
+</html>
