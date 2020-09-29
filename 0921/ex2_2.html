@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>ex2</title>
+		<link rel="stylesheet" href="css/reset.css"/>
+		<style>
+			#wrap{
+				width: 600px;
+				/*
+					Height: 60 + 116
+				*/
+				height: 176px;
+				border-top: 1px solid #424242;
+				border-left: 1px solid #424242;
+				border-right: 11px solid #424242;
+				border-bottom: 11px solid #424242;
+				background-color: lightgray;
+				/*box-shadow: 10px 10px 0 #424242;*/
+				/*
+					박스모델
+					너비 602 높이 178
+					+
+					쉐도우 효과
+					-> 쉐도우 효과 까지 고려한 브라우저기준 가운데 위치
+				*/
+				position: fixed;
+				left: 50%;
+				top:50%;
+				margin: -94px 0 0 -306px;
+			}
+			#logo{
+				width: 66px;
+				height: 20px;
+				/*margin: 20px 0;*/
+				margin:20px;
+			}
+			#logo a{
+				background-image: url(img/logo_kakao.png);
+				width: 66px;
+				height: 20px;
+				display: block;
+				text-indent: -9999px;
+				overflow: hidden;
+			}
+			#gnb::before, #gnb::after{
+				content: "";
+				position:absolute;
+				width:0;
+				height: 0;
+			}
+			#gnb::before{
+				border-bottom: 10px solid #ffffff;
+				border-right: 10px solid #424242;
+				bottom: -11px;
+				left: -1px;
+			}
+			#gnb::after{
+				border-right: 10px solid #ffffff;
+				border-bottom: 10px solid #424242;
+				top: -1px;
+				right: -11px;
+			}
+			#gnb ul{
+				/*overflow: hidden;*/
+				height: 116px;
+			}
+			#gnb li {
+				width: 120px;
+				height: 116px;
+				float: left;
+			}
+			#gnb li>a{
+				width: 120px;
+				height: 116px;
+				display: block;
+				background-image: url(img/ko_img_gnb_150615.png);
+				text-indent: -9999px;
+				overflow: hidden;
+				transition: .2s ease;
+			}
+			#gnb li>a:hover{
+				background-color: #FFC107;
+			}
+			.story a{
+				background-position: -120px 0;
+			}
+			.taxi a{
+				background-position: -240px 0;
+			}
+			.game a{
+				background-position: -720px -116px;
+			}
+			.group a{
+				background-position: -480px 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="header">
+				<h1 id="logo"><a href="">kakao</a></h1>
+			</div><!--//header-->
+			<div id="gnb">
+				<h2 class="screen_out">주요서비스</h2>
+				<ul>
+					<li class="talk"><a href="">카카오톡</a></li>
+					<li class="story"><a href="">카카오스토리</a></li>
+					<li class="taxi"><a href="">카카오택시</a></li>
+					<li class="game"><a href="">카카오게임</a></li>
+					<li class="group"><a href="">카카오그룹</a></li>
+				</ul>	
+			</div>
+		</div><!--//wrap-->
+	</body>
+</html>
+
+
+

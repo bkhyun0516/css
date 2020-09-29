@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>구구단예제</title>
+
+    <link rel="stylesheet" href="css/reset.css"/>
+    <style>
+        body {
+            margin-left: 5px;
+        }
+
+        #formBox {
+            margin-bottom: 20px;
+        }
+        #box{
+            width: 400px;
+            height: 400px;
+            background-color: #777b80;
+        }
+        #box ul{
+            padding: 20px;
+        }
+        #box li {
+            width: 400px;
+            height: 40px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<div id="formBox">
+    <input id="input"/>
+    <button id="getBtn">구구단보기</button>
+</div>
+<div id="box">
+    <ul></ul>
+</div>
+<script src="js/jquery.js"></script>
+<script>
+
+    function display(){
+        $("#box ul").empty();
+        const num = $("#input").val()
+        for(let i=1; i<10; i++){
+            const result = num*i;
+            $("<li>").text(num+" * "+i+" = "+ result)
+                .appendTo("#box ul");
+        }
+        $("#input").val("");
+    }
+   $("#getBtn").click(function () {
+       display();
+   });//#getBtn.click end
+   $(document).keyup(function (e) {
+       if(e.keyCode== 13) {
+            display();
+       }
+   });
+</script>
+</body>
+</html>

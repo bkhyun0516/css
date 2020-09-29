@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>textAndHtml</title>
+    <style>
+        div{
+            width: 310px;
+            height: 409px;
+            background-color: chocolate;
+            border: 1px solid #424242;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>text메서드와 html메서드의차이</h1>
+    <button>입력</button>
+    <div id="text"></div>
+    <div id="html"></div>
+    <script src="js/jquery.js"></script>
+    <script>
+        $("button").click(function () {
+            const msg = "<img src='img/hungry.jpg' width='310px'>";
+            const msg1 = "<sript>while(true){alert('장난');}<\/script>";
+            //문자열 안에 요소가 있어도 무조건 문자열처리
+            $("#text").text(msg);
+            // 문자열안에 요소가 있으면 요소로 인식
+            $("#html").html(msg);
+
+        });//button click
+    </script>
+</body>
+</html>

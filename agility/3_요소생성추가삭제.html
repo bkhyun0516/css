@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <title>요소의 생성/추가/삭제</title>
+    <style>
+        #animalList {
+            width: 200px;
+            list-style: none;
+            margin: 0;
+            padding: 20px;
+            background-color: coral;
+        }
+       /* 0 1 0 1 */
+       #animalList li {
+            width: 200px;
+            height: 60px;
+            background-color: pink;
+            text-align: center;
+            line-height: 60px;
+            cursor: pointer;
+            margin : 10px 0;
+           user-select: none;
+        }
+        /* 0 1 1 1*/
+        #animalList li:hover {
+            background-color: antiquewhite;
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
+</head>
+<body>
+<p>
+    <input autocomplete="off" id="name" placeholder="동물이름입력"/>
+    <button id="createBtn">생성</button>
+    <button id="removeAllBtn">전부삭제</button>
+</p>
+<ul id="animalList">
+    <li>개미핡기</li>
+</ul>
+</body>
+<script src="js/jquery.js"></script>
+<script>
+
+    /*
+
+        인자2개짜리: 우리가 알고 있는 (그순간 존재하는
+        요소들에게 이벤트 리스너 붙이는 메서드)
+        자신.on(이벤트명, 이벤트핸들러함수)
+
+
+        - 인자 3개 짜리: 조상에 자신이 붙으면
+        이벤트리스너가 붙음(아직 존재하지 않는 요소에도
+        이벤트리스너를 붙일수 있다.
+
+        조상.on(이벤트명, 자신, 이벤트 핸들러 함수
+    */
+
+
+    $("#animalList").on("click","li",function () {
+        // 요소삭제 remove()
+        $(this).remove();
+    });//#animalList li .on end
+    //->  현재 존재하는 요소들에만 적용
+    // 미래 요소들은 이벤트리스트 못붙임
+    /*
+        요소를 DOM에 추가하는 메서드
+        - 부모.append(자식):   자식을
+           부모의 마지막 자식으로 추가
+        -  자식.appendTo(부모): 자식을
+           부모에 마지막자식으로 추가
+        -  부모.prepend(자식): 자식을
+           부모의 첫번째 자식으로 추가
+        -  자식.prependTo(부모):자식을
+           부모의 첫번째 자식으로 추가
+
+        - 기존형제.after(새로추가되는요소)
+        - 새로추가되는요소.insertAfter(기존형제)
+        - 기존형제.before(새로추가되는요소)
+        - 새로추가되는요소.insertBefore(기존형제)
+
+
+    */
+
+    //유저가 입력한 이름으로 li요소를 생성하여
+    //ul요소에 붙이는 함수(이벤트핸들러)
+    function createAnimal() {
+        const animal = $("#name").val();
+        $("#name").val("").focus();
+        const $Li = $("<li>").text(animal);
+        $("#animalList").append($Li);
+        // $("<li>").text(animal).appendTo("#animalList");
+        // $("#animalList").prepend($("<li>").text(animal));
+        // $("<li>").text(animal).prependTo("#animalList");
+        //:last는 jquery 전용선택자(css에서는 사용불가.last-child 써라)
+        // $("li:last").after($("<li>").text(animal));
+        // $("<li>").text(animal).insertAfter("li:last");
+        // $("li:first").before($("<li>").text(animal));
+        // $("<li>").text(animal).insertBefore("li:first");
+    }//function creatAnimal() end
+    /*
+          createAnimal(): 전화직접하는거고
+          createAnimal: 전화번호를 알려주는것
+          만약
+          $("#createBtn").click(createAnimal());면
+          시작할때 한번 호출하고 끝...
+     */
+    $("#createBtn").click(createAnimal);// $("#createBtn").click() end
+
+   $("#removeAllBtn").click(function () {
+       //자식요소
+       $("#animalList").empty();
+       /*
+             li를 전부 비우기 때문에 before,after류 말고
+             append, preppend사용해야된다.
+       */
+   });// $("#removeAllBtn").click() end
+
+    $("#name").keyup(function (e) {
+       if(e.keyCode == 13){
+            createAnimal();
+       }
+    });
+
+
+
+</script>
+</html>

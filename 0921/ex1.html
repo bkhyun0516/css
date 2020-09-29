@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>2단 레이아웃 제작</title>
+		<link rel="stylesheet" href="css/reset.css"/>
+		<link rel="stylesheet" href="css/all.min.css"/>
+		<link rel="stylesheet" href="css/notosanskr.css"/>
+		<style>
+			#wrap {
+				width:1000px;
+				font-family: "Noto Sans KR", sans-serif;
+				border: 2px dotted #E1BEE7;
+				margin: auto;
+				text-align: center;
+
+			}
+			#header, #footer{
+				width: 1000px;
+				height: 98px;
+				line-height: 98px;
+
+			}
+			#header {
+				font-size: 40px;
+				font-weight: 900;
+				border-bottom: 2px dotted #E1BEE7;
+			}
+			#footer {
+				border-top: 2px dotted #E1BEE7;
+				font-weight: 100;
+				clear: both;
+
+			}
+			#content{
+				width: 698px;
+				height: 500px;
+				border-right: 2px dotted #E1BEE7;
+				line-height: 500px;
+				float: left;
+				/*background-color: green;*/
+			}
+			#wrap h2 {
+				font-weight: 700;
+				font-size: 36px;
+			}
+			#sidebar {
+				width: 300px;
+				height: 250px;
+				line-height: 250px;
+				float: right;
+			}
+
+		</style>
+	</head>
+	<body>
+<!--
+	수업 코딩 컨벤션
+	HTML의 id, class 규칙
+	id: 낙타표기법
+	imgBox
+	class: 언더바표기법
+	box_img
+-->
+	<div id="wrap">
+		<div id="header">
+			<h1>경현의 웹서비스</h1>
+		</div><!-- //#header end-->
+		<div id="content">
+			<h2><i class="fas fa-marker"></i>컨텐트 영역</h2>
+		</div><!-- //#content end-->
+		<div id="sidebar">
+			<h2><i class="fas fa-feather-alt"></i>사이드 바</h2>
+		</div><!-- //#sidebar end-->
+		<div id="footer">
+			<address><i class="fas fa-address-book"></i>&copy; 2020 bmj.com </address>
+		</div><!-- //#footer end-->
+	</div><!-- //#wrap end-->
+	</body>
+</html>
+
+
+
+
+

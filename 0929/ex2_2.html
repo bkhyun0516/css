@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습문제3</title>
+    <link rel="stylesheet" href="css/all.min.css"/>
+</head>
+<body>
+<h1>원하는 사이트 클릭</h1>
+<!--<button id="google"><i class="fab fa-facebook"></i>구글</button>-->
+<!--<button id="facebook"><i class="fab fa-facebook-square"></i>페이스북</button>-->
+<!--<button id="instagram"><i class="fab fa-instagram"></i>인스타그램</button>-->
+<!--<button id="twitter"><i class="fab fa-twitter"></i>트위터</button>-->
+<button data-site="google"><i class="fab fa-facebook"></i>구글</button>
+<button data-site="facebook"><i class="fab fa-facebook-square"></i>페이스북</button>
+<button data-site="instagram"><i class="fab fa-instagram"></i>인스타그램</button>
+<button data-site="twitter"><i class="fab fa-twitter"></i>트위터</button>
+
+<script src="js/jquery.js"></script>
+<script>
+    $("button").click(function () {
+
+        // const id = $(this).attr("id");
+        // const data = this.dataset.site;
+        const data1 = $(this).attr("data-site");
+        // const data2 = $(this).data("site");
+        // alert(data + data1 + data2);
+        // location.href="http://"+id+".com";
+        location.href="http://"+data1 +".com";
+    });// button.click() end
+</script>
+</body>
+</html>

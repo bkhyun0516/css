@@ -20,37 +20,165 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="870bdff5-3fa9-4de5-a0b1-3bfadeab2fc4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../0909/1_0824_실습1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../0909/2_주성호의사연.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../0909/3_0824_실습2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../0909/4_자식_자손선택자.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../0909/5_css의구체성(명시도).html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../0909/6_요소의생성.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../0909/7_이펙트예제.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../0910/1_이미지슬라이드기초.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../0910/2_margin_auto.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../0910/3_if문.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../0910/4_정진하씨_사연.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../0910/5_이미지로테이트.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../0910/7_input_textarea_select.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../0910/8_요소생성추가삭제.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../0910/9_ajax기초.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../0910/data/movie.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1_ajax기초.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2_json.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3_each메서드.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_ajax복습.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_박스오피스.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6_change.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_영화검색.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/playList.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/seriesList.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0826_백경현/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../0826_백경현/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0827/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../0827/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0827/5_자바스크립트객체.html" beforeDir="false" afterPath="$PROJECT_DIR$/../0827/5_자바스크립트객체.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0828/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../0828/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0828/1_0827실습문제리뷰.html" beforeDir="false" afterPath="$PROJECT_DIR$/../0828/1_0827실습문제리뷰.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0828/2_박스모델.html" beforeDir="false" afterPath="$PROJECT_DIR$/../0828/2_박스모델.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/.idea/0914.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/1_수직메뉴.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/2_이미지수직메뉴.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/2_이미지수직메뉴백경현.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/3_박스그림자안쪽으로.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/4_블록레벨의수평레이아웃.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/5_float이란.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/6_1층_2층.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/7_float활용.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/8_수평메뉴.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/9_복습.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/css/all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/css/apple.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/css/notosanskr.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/css/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/img/blog_a.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/img/c1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/img/c2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/img/c3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/img/c4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/img/c5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/img/cafe_a.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/img/footer_face01.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/img/footer_face02.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/img/footer_face03.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/img/footer_face04.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/img/footer_face05.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/img/footer_face06.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/img/footer_face07.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/img/footer_face08.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/img/globalnavbg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/img/kin_a.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/img/mail_a.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/img/ryan.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-Black-Hestia.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-Black-Hestia.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-Black-Hestia.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-Bold-Hestia.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-Bold-Hestia.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-Bold-Hestia.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-DemiLight-Hestia.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-DemiLight-Hestia.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-DemiLight-Hestia.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-Light-Hestia.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-Light-Hestia.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-Light-Hestia.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-Medium-Hestia.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-Medium-Hestia.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-Medium-Hestia.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-Regular-Hestia.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-Regular-Hestia.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-Regular-Hestia.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-Thin-Hestia.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-Thin-Hestia.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/NotoSansKR-Thin-Hestia.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/SFProKR_regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/SFProKR_semibold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/sf-pro-display_regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914/webfonts/sf-pro-display_semibold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/.idea/0914.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/1_수직메뉴.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/2_이미지수직메뉴.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/2_이미지수직메뉴백경현.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/3_박스그림자안쪽으로.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/4_블록레벨의수평레이아웃.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/5_float이란.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/6_1층_2층.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/7_float활용.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/8_수평메뉴.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/9_복습.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/css/all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/css/apple.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/css/notosanskr.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/css/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/img/blog_a.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/img/c1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/img/c2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/img/c3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/img/c4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/img/c5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/img/cafe_a.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/img/footer_face01.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/img/footer_face02.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/img/footer_face03.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/img/footer_face04.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/img/footer_face05.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/img/footer_face06.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/img/footer_face07.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/img/footer_face08.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/img/globalnavbg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/img/kin_a.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/img/mail_a.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/img/ryan.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-Black-Hestia.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-Black-Hestia.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-Black-Hestia.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-Bold-Hestia.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-Bold-Hestia.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-Bold-Hestia.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-DemiLight-Hestia.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-DemiLight-Hestia.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-DemiLight-Hestia.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-Light-Hestia.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-Light-Hestia.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-Light-Hestia.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-Medium-Hestia.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-Medium-Hestia.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-Medium-Hestia.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-Regular-Hestia.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-Regular-Hestia.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-Regular-Hestia.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-Thin-Hestia.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-Thin-Hestia.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/NotoSansKR-Thin-Hestia.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/SFProKR_regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/SFProKR_semibold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/sf-pro-display_regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../0914_/webfonts/sf-pro-display_semibold.woff2" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +207,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../0910" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -91,6 +220,7 @@
       <updated>1599785278200</updated>
       <workItem from="1599785279359" duration="26072000" />
       <workItem from="1600003475751" duration="4277000" />
+      <workItem from="1600129778721" duration="60000" />
     </task>
     <servers />
   </component>

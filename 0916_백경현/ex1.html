@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>2단 레이아웃 제작</title>
+	<!--	브라우저 자체 CSS 초기화		-->
+	<link rel="stylesheet" href="css/reset.css"/>
+	<!--	Noto Sans KR 폰트 파일 import		-->
+	<link rel="stylesheet" href="css/notosanskr.css"/>
+	<!--	폰트어썸 파일 import		-->
+	<link rel="stylesheet" href="css/all.min.css"/>
+	<!--	내부CSS	-->
+	<style>
+		body {
+			/*Noto Sans KR 폰트적용*/
+			font-family: "Noto Sans KR",sans-serif;
+		}
+		#wrap {
+			/*너비*/
+			width:1000px;
+			/*브라우저 기준 수평 가운데 정렬*/
+			margin: auto;
+			/*테두리선*/
+			border: 2px dotted grey;
+			/*텍스트 수평가운데정렬 */
+			text-align: center;
+			/*Noto Sans KR 두께 설정*/
+			font-weight: 900;
+			/*폰트 사이즈*/
+			font-size: 40px;
+		}
+		/*header & footer  공통 CSS사항*/
+		.topBottom {
+			/*박스모델 크기 1000 X 100*/
+			width: 1000px;
+			/* 높이는  보더 때문에 -2를 하였다 */
+			height: 98px;
+			/*텍스트 수직 가운데 정렬 */
+			line-height: 98px;
+		}
+		#header{
+			/*header 아랫 테두리선 */
+			border-bottom: 2px dotted black;
+		}
+		#content{
+			/*박스모델 크기 700 X 500*/
+			/*보더라이트 때문에 너비가 2 감소*/
+			width: 698px;
+			height: 500px;
+			border-right: 2px dotted black;
+			/*텍스트 수직 가운데 정렬 */
+			line-height: 500px;
+			/*2단 레이아웃 효과를 위해 float로 2층으로 띄웠다.*/
+			float:left;
+		}
+		#sidebar{
+			/*박스모델 크기 300 X 250*/
+			width: 300px;
+			height: 250px;
+			line-height: 250px;
+			/*2단 레이아웃 효과를 위해 float로 2층으로 띄웠다.*/
+			float:left;
+		}
+		 #wrap #footer{ /*혹시 모를 구체성을 위해서~*/
+			/*footer 아랫 테두리선 */
+			border-top: 2px dotted black;
+			/*wrap의 크기유지를 위해 마지막 자식인 footer에 clear*/
+			clear: both;
+			/* 폰트 웨이트 사이즈 조절*/
+			font-weight: 200;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header" class="topBottom"><i class="far fa-gem"></i> 필구의 웹서비스</div><!--#header end -->
+		<div id="content" class="leftRight"><i class="fas fa-map-marker-alt"></i> 콘텐트 영역</div><!--#content end -->
+		<div id="sidebar" class="leftRight"><i class="fas fa-camera-retro"></i> 사이드바</div><!--#sidebar end -->
+		<div id="footer" class="topBottom">&copy; 2020 bmg.com</div><!--#footer end -->
+	</div><!--#wrap end -->
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>구구단</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <style>
+        #box{
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+            background-color: lightgray;
+        }
+        #formBox{
+            margin:20px;
+        }
+        #dan{
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="formBox">
+    <form id="form"  action="http://naver.com">
+        <!--
+              form을 쓰는 장점은 버튼을 눌렀을 때나 엔터를 눌렸을때 둘 다 동작
+              form은 기능요소여서 CSS 입히지말아야함
+              굳이 하고싶다면 form을 감싸는 div만들어서 거기다 CSS 지정해라
+        -->
+        <input id="dan" autocomplete="off">
+        <!--    autocomplete="off" :자동완성 끄기    -->
+        <button>출력</button>
+    </form>
+</div>
+
+<ul id="box"></ul>
+<script src="js/jquery.js"></script>
+<script>
+    /*
+          input요소에서 엔터나 버튼 클릭시 폼의 submit이벤트 발생
+     */
+
+    const $dan =$("#dan").focus();
+    const $box = $("#box");
+
+    $("#form").on("submit",function (e) {
+        //a요소에서 링크이동
+        //          or form에서 action으로 submit 하는 것을 막는다.
+        e.preventDefault();
+        //입력값 얻어오기
+        const dan = $dan.val();
+        // alert(dan);
+        //유저가 입력한 단을 지우고 포커스 맞추기
+        $dan.val("").focus();
+        //기존자료 전부 지우기
+        $box.empty();
+        for(let i=1;i<10;i++){
+            const full = dan+"*"+i+"="+ dan*i;
+            //li 요소 생성후 ul에 붙인다.
+            $("<li>").text(full)
+                    .appendTo($box);
+            //appendTo안에는 선택자 요소 객체 둘 다 oK
+        }// for end
+
+    });//#form on end
+</script>
+</body>
+</html>

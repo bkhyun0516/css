@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>ex2</title>
+<!--    <link rel="stylesheet" href="css/reset.css"/>-->
+    <link rel="stylesheet" href="css/notosanskr.css"/>
+    <link rel="stylesheet" href="css/all.min.css"/>
+</head>
+<body>
+<h1>당신이 가고싶은 사이트를 클릭하세요</h1>
+<div>
+    <button><i class="fab fa-facebook"></i>구글</button>
+    <button><i class="fab fa-facebook-square"></i>페이스북</button>
+    <button><i class="fab fa-twitter"></i>트위터</button>
+    <button><i class="fab fa-instagram"></i>인스타그램</button>
+</div>
+</body>
+<script src="js/jquery.js"></script>
+<script>
+    const $button = $("button");
+    $button.click(function () {
+        const num= $(this).index();
+        if(num==0){
+            location.href="https://www.google.com/";
+        }else if(num==1){
+            location.href="https://ko-kr.facebook.com/";
+        }else if(num==2){
+            location.href="https://twitter.com/?lang=ko";
+        }else{
+            location.href="https://www.instagram.com/?hl=ko";
+        }//end
+
+    });//$button.click() end
+
+</script>
+</html>

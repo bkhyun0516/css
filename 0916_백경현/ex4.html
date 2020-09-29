@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>interactive 웹서비스</title>
+		<!--	브라우저 자체 CSS 초기화		-->
+		<link rel="stylesheet" href="css/reset.css" />
+		<!--	Noto Sans KR 폰트 파일 import		-->
+		<link rel="stylesheet" href="css/notosanskr.css"/>
+		<!--	폰트어썸 파일 import		-->
+		<link rel="stylesheet" href="css/all.min.css" />
+		<!--	내부CSS	-->
+		<style>
+			#wrap {
+				/*너비 높이 박스쉐도우효과*/
+				width: 700px;
+				height: 700px;
+				box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+				/*브라우저 수평수직 가운데 정렬*/
+				position: fixed;
+				left: 50%;
+				top:50%;
+				margin: -350px 0 0 -350px;
+				/*폰트 지정*/
+				font-family: "Noto Sans KR",sans-serif;
+				/*내부 텍스트 수평가운데 정렬*/
+				text-align: center;
+			}
+			/*h1 CSS*/
+			#wrap h1{
+				/*폰트 굵기, 크기 지정*/
+				font-weight: 900;
+				font-size: 50px;
+				/*색상 지정*/
+				color: #FFC107;
+				/*마진 설정*/
+				margin: 20px 0;
+			}
+			/* #executeBtn CSS*/
+			#executeBtn{
+				/*버튼 크기 높이*/
+				width: 200px;
+				height: 60px;
+				margin-top: 20px;
+				/*뒷배경색*/
+				background-color: green;
+				/*글자색상지정*/
+				color: white;
+				/*글자크기 지정*/
+				font-size: 20px;
+			}
+			/*#box CSS*/
+			#box {
+				/*너비 높이 그림자효과*/
+				width: 500px;
+				height: 500px;
+				box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				/*#wrap기준 수평 가운데 정렬*/
+				margin: auto;
+				/*뒷배경 이미지 설정*/
+				background-image: url(img/ryan.gif);
+			}
+			/*door 클래스 CSS 설정*/
+			.door{
+				/*너비 높이*/
+				width: 250px;
+				height: 500px;
+				/* 수평하게하기 위해 float로 2층으로 띄웠다 */
+				float: left;
+				/*텍스트 색상 지정*/
+				color: white;
+				/*텍스트 수직 가운데 정렬*/
+				line-height: 500px;
+				/*폰트 크기 지정*/
+				font-size: 300px;
+				/*원근법 효과 지정*/
+				/*트랜지션 효과 지정*/
+				transition: 2s ease;
+			}
+			#man{
+				/*배경색지정*/
+				background-color: red;
+				/*회전 중심 지정*/
+				transform-origin: 0 center;
+				transform:perspective(1000px) rotateY(0);
+			}
+			#man.open {
+				transform:perspective(1000px) rotateY(-150deg);
+			}
+			#woman{
+				/*배경색지정*/
+				background-color: dodgerblue;
+				/*회전 중심 지정*/
+				transform-origin: 100% center;
+				/*회전 초기값 설정*/
+				transform:perspective(1000px) rotateY(0);
+			}
+			#woman.open{
+				/* 변화할 회전값*/
+				transform:perspective(1000px) rotateY(150deg);
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<h1>문을 여시오!</h1>
+			<div id="box">
+				<div id="man" class="door"><i class="fa fa-male"></i></div>
+				<div id="woman" class="door"><i class="fa fa-female"></i></div>
+			</div><!--//box-->
+            <button id="executeBtn">열고 닫기</button>
+		</div><!--//wrap-->
+		<script src="js/jquery.js"></script>
+		<script>
+			$("#executeBtn").click(function () {
+				$("#man").toggleClass("open");
+				$("#woman").toggleClass("open");
+			});//$("#executeBtn").click() end
+		</script>
+	</body>
+</html>

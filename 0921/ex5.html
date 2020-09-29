@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>카카오프렌즈 이름 맞추기</title>
+		<link rel="stylesheet" href="css/reset.css"/>
+        <link rel="stylesheet" href="css/notosanskr.css"/>
+        <link rel="stylesheet" href="css/all.min.css"/>
+        <style>
+            @font-face { font-family: 'SDKukdetopokki-Lt'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/SDKukdetopokki-aLt00.woff') format('woff'); font-weight: normal; font-style: normal; }
+            #wrap {
+                width: 900px;
+                border: 10px solid #424242;
+                margin: auto;
+                font-family: "Noto Sans KR",sans-serif;
+            }
+            #wrap h1{
+                font-weight: 900;
+                font-size: 40px;
+                text-align: center;
+                margin: 20px 0;
+            }
+            #wrap #imgBox {
+                width: 340px;
+                height: 340px;
+                margin: auto;
+                box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                /* 포지셔닝 컨텍스트 지정*/
+                position:relative;
+                overflow: hidden;
+                border: 5px solid #424242;
+            }
+            #imgs{
+                width: 340px;
+                height: 2380px;
+                /*background-color: #E1BEE7;*/
+                position:absolute;
+                transition: 1s ease;
+                /*top:0;*/
+            }
+            #nameBox{
+                margin: 20px 0;
+                text-align: center;
+            }
+            #nameBox li{
+                background: #FFC107;
+                /*
+                        inline의 장점(수평, text-align: center)과
+                        block의 장점(크기 지정& 공간차지)을
+                        합친 것이 inline-block
+                        단 엔터값이 공간 차지하는것을 주의해라
+                        (주석 처리로 방지할수 있다.)
+                 */
+                display: inline-block;
+                margin : 0 5px;
+                /*box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+            }
+            #nameBox li>a{
+                display: block;
+                padding: 10px 12px;
+                color: white;
+                font-weight: 700;
+                font-size: 22px;
+                text-decoration: none;
+                transition: 1s ease;
+            }
+            #nameBox li>a:hover{
+                background-color: orange;
+                box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+        </style>
+	</head>
+	<body>
+		<div id="wrap">
+			<h1><i class="fa fa-comment"></i> 카카오 프렌즈 이름 맞추기</h1>
+			<div id="imgBox">
+                <div id="imgs">
+                    <img src="img/k1.png" alt="무지"/>
+                    <img src="img/k2.png" alt="어피치"/>
+                    <img src="img/k3.png" alt="제이지"/>
+                    <img src="img/k4.png" alt="프로도"/>
+                    <img src="img/k5.png" alt="네오"/>
+                    <img src="img/k6.png" alt="튜브"/>
+                    <img src="img/k7.png" alt="라이언"/>
+                </div><!--//#imgs -->    
+			</div><!--//#imgBox -->
+            <div id="nameBox">
+                <h2 class="screen_out">카카오프렌즈 이름들</h2>
+                <ul>
+                    <li><a href="">무지</a></li>
+                    <li><a href="">어피치</a></li>
+                    <li><a href="">제이지</a></li>
+                    <li><a href="">프로도</a></li>
+                    <li><a href="">네오</a></li>
+                    <li><a href="">튜브</a></li>
+                    <li><a href="">라이언</a></li>
+                </ul>
+            </div><!--//#nameBox -->
+		</div><!--//wrap -->
+    <script src="js/jquery.js"></script>
+    <script>
+        //정답을 저장하는 전역변수
+        let anwser=0;
+
+        const $imgs=$("#imgs");
+
+        //랜덤하게 친구를 보여줌
+        function randomFriend() {
+            answer = Math.floor(Math.random()*7);
+            console.log(answer);
+            $imgs.css("top",answer*-340);
+        }//randomFriend() end
+
+        randomFriend();
+        $("#nameBox li").click(function (e) {
+            e.preventDefault();
+            const idx=$(this).index();
+            if(idx==answer){
+                alert("정답~~ :)");
+                randomFriend();
+            } else{
+                alert("오.답.>(");
+            }//if~else end
+        });
+    </script>
+	</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>아주 멋진 순발력게임</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/notosanskr.css"/>
+    <link rel="stylesheet" href="css/all.min.css"/>
+<!--    <link rel="icon" href="img/121.png"/>-->
+    <link rel="icon" href="https://coresos-phinf.pstatic.net/a/32aj9e/3_fjbUd018svcs019pap2zb1z_31s611.jpg?type=w520"/>
+    <style>
+        body {
+            font:100 16px 'Noto Sans KR',sans-serif;
+        /*    font-weight:100;
+              font-size:16px;
+              font-family: 'Noto Sans KR',sans-serif;
+              한번에 썻다.*/
+            text-align: center;
+        }
+        #wrap{
+            width:800px;
+            height: 700px;
+            box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            position: fixed;
+            left: 50%;
+            top:50%;
+            margin: -350px 0 0 -400px;
+        }
+        #header, #footer{
+            width: 800px;
+            height: 100px;
+            line-height: 100px;
+            /*background-color: red;*/
+        }
+        #header h1{
+            font-size: 40px;
+            font-weight: 900;
+        }
+        #content {
+            width: 500px;
+            height: 500px;
+            box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+            margin:auto;
+            position:relative;
+            overflow: hidden;
+        }
+        #startBtn {
+            width: 500px;
+            height: 500px;
+            border: none;
+            cursor: pointer;
+            background-color: darksalmon;
+            font-size: 300px;
+            color:#fff;
+            transition: .2s ease;
+            position:absolute;
+            left:0;
+            outline: none;/*공간을차지하는 보더와 달리 공간을 차지하지 않는다.*/
+            /*display: none;*/
+        }
+        #startBtn:hover{
+            text-shadow: 0 0 20px #fff;
+            background-color: lightpink;
+        }
+        #startBtn.open{
+            left: -500px;
+        }
+    #numberList li{
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        color: #fff;
+        font-weight: 900;
+        font-size: 60px;
+        text-shadow: 0 0 2px #424242;
+        line-height: 100px;
+        float:left;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    #numberList li.hide {
+        visibility: hidden;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1><i class="fas fa-gamepad"></i>아주 멋진 순발력게임</h1>
+        </div><!--#header end-->
+       <div id="content">
+            <button id="startBtn" class="fas fa-power-off">
+                <span class="screen_out">게임시작</span>
+            </button>
+           <ul id="numberList">
+
+           </ul>
+       </div><!--#content end-->
+       <div id="footer">
+           <address> &copy; 2020 bmj.com </address>
+       </div><!--#footer end-->
+    </div><!--#wrap end-->
+    <script src="js/jquery.js"></script>
+    <script src="js/random-color.js"></script>
+<!--    랜덤한 색상을 얻어오는 함수-->
+    <script src="js/shuffle-array.js"></script>
+<!--    셔플된 배열을 얻어오는 함수-->
+    <script>
+
+        const $startBtn = $("#startBtn");
+        /*
+                2020-09-28 15:49 백경현
+         */
+        /*
+            넘버목록
+        */
+        const $numberList = $("#numberList");
+        /*
+            정답저장변수
+         */
+        let answer = 1;
+        //시작시간을 저장하는 변수
+        let start;
+
+
+        $startBtn.on("click" ,function () {
+
+            //정답 1로 초기화
+            answer=1;
+            // 그리고
+            setNumberItems();
+            //start 초기화
+            start = new Date();
+        });//$startBtn.on end
+
+
+
+        // #numberList안에 li 요소가 존재하면
+        //무조건 click 이벤트리스너 붙인다.
+        $numberList.on("click","li",function (){
+            // $(this).remove();//요소제거
+            // 우리가 클릭한 그요소의 글자 얻어오기
+            const $this=$(this);
+            const num = $this.text();
+
+            if(num==answer){
+                //보여지는것을 숨김
+                $this.addClass("hide");
+                //정답을 1 중갸
+                answer++;
+                if(answer>25){
+                    //한게임 끝났기 때문에
+                    // 끝시간을 저장하는 변수
+                    const end = new Date();
+                    alert((end-start)/1000 + "초");
+
+                    // 기존의 숫자 li를 전부비우기
+                    $numberList.empty();
+                    //버튼 닫기
+
+                    $(".open").removeClass("open");
+
+                }//if end
+            }else{
+                   alert("응~오답이야~~~^______^");
+            }//if~else end
+        });// #numberList li click end
+
+        function setNumberItems() {
+
+            //랜덤한 색상
+            // alert(getRandomColor());
+            //랜덤한 번호로 li를 생성후 ul에 append
+            let numbers = getShuffleNumber(25);
+            console.log(numbers);
+            for(let i=0 ; i < 25 ; i++){
+                $("<li>").css("backgroundColor",getRandomColor())
+                        .text(numbers[i])
+                        .appendTo("#numberList");
+            }//for end
+            $startBtn.addClass("open");
+        }//function setNumberItems() end
+
+        //처음에 한번 호출
+        // setNumberItems();
+
+    </script>
+</body>
+</html>

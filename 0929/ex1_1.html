@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습문제 1번</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/notosanskr.css"/>
+    <style>
+        body{
+            text-align: center;
+        }
+        h1 {
+            height: 120px;
+            /*font: 900 60px/120px "Noto Sans KR",sans-serif;*/
+            /*
+               font는 font-size, font-weight,
+               font-varient,font-style, font-family,
+               line-height까지 한번에 쓰는 대표속성
+
+               순서가 제일뒤가 font-family,
+               뒤에서 두번째가 font-size
+         */
+            line-height: 120px;
+            font-family: "Noto Sans KR",sans-serif;
+            font-size: 60px;
+            font-weight: 900;
+            /*background-color: red;*/
+            color:#424242;
+            user-select: none;
+        }
+        button {
+            border:none;
+            padding: 10px 30px;
+            font: 700 30px "Noto Sans KR",sans-serif;
+            pointer: cursor;
+            background-color: azure;
+            transition: .2s ease;
+            user-select: none;
+            outline: none;
+        }
+        button:hover {
+            background-color: dodgerblue;
+            color: white;
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        h1.big {
+            transform: scale(1.5);
+            color:blue;
+            text-shadow: 0 0 10px blue;
+            /*font-size: 100px;*/
+        }
+    </style>
+</head>
+<body>
+    <h1> 버튼을 눌러보세요</h1>
+    <button>난 버튼</button>
+</body>
+<script src="js/jquery.js"></script>
+<script>
+    const $h1= $("h1");
+    $("button").on("click",function () {
+        $h1.toggleClass("big");
+    })
+</script>
+</html>

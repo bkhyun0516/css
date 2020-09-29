@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>ex2</title>
+	<!-- 파비콘 설정	-->
+	<link rel="icon" href="img/K_favicon.ico"/>
+	<!--	브라우저 자체 CSS 초기화		-->
+	<link rel="stylesheet" href="css/reset.css"/>
+	<!--	내부CSS	-->
+	<style>
+		#wrap {
+			/*너비 설정*/
+			width: 600px;
+			/*브라우저 기준 수직 수평 가운데 정렬*/
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			margin: -88px 0 0 -300px;
+			/*백그라운드 색상 설정*/
+			background-color: #eeeeee;
+			/*백그라운드 이미지 반복금지 설정 (공통이라 부모에 적음)*/
+			background-repeat: no-repeat;
+			/*박스쉐도우 설정*/
+			box-shadow: 10px 10px 0 black;
+		}
+		/*카카오 로고가 들어갈 박스*/
+		#wrap #header {
+			/*너비 높이*/
+			width: 66px;
+			height: 20px;
+			/*마진*/
+			margin:20px;
+			/* 백그라운드 이미지*/
+			background-image: url(img/logo_kakao.png);
+			/*IR 기법*/
+			text-indent: -9999px;
+			overflow: hidden;
+		}
+		#gnb {
+			/*어플 이미지를 위한 IR기법*/
+			text-indent: -9999px;
+			overflow: hidden;
+		}
+		#gnb li {
+			/*어플이미지리스트의 너비 크기*/
+			width: 120px;
+			height: 116px;
+			/*수평정렬을 위한 float*/
+			float:left;
+			background-image: url(img/ko_img_gnb_150615.png);
+			/*트랜지션 효과*/
+			transition: .2s ease;
+		}
+		/* 마우스 오버서 색상 변경*/
+		#gnb li:hover {
+			background-color: #FFC107;
+		}
+		/*IS 기법을 사용한 어플 이미지 변경*/
+		#gnb li:nth-child(2) {
+			background-position: -120px 0;
+		}
+		#gnb li:nth-child(3) {
+			 background-position: -240px 0;
+		}
+		#gnb li:nth-child(4) {
+			background-position: -720px -116px;
+		}
+		#gnb li:nth-child(5) {
+			background-position: -480px 0;
+		}
+		/*위쪽 오른쪽에 위치한 삼각형 구현*/
+		#wrap:before{
+			content: "";
+			width: 0;
+			height: 0;
+			border-top: 10px solid transparent;
+			border-left: 10px solid black;
+			/*삼각형 위치조정*/
+			position: absolute;
+			left:600px;
+		}
+		/*아래쪽 왼쪽에 위치한 삼각형 구현*/
+		#wrap:after{
+			content: "";
+			width: 0;
+			height: 0;
+			border-top: 10px solid black;
+			border-left: 10px solid transparent;
+			/*삼각형위치조정*/
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<h1 id="logo"><a href="">kakao</a></h1>
+		</div><!--//header-->
+		<div id="gnb">
+			<h2 class="screen_out">주요서비스</h2>
+			<ul>
+				<li class="talk"><a href="">카카오톡</a></li>
+				<li class="story"><a href="">카카오스토리</a></li>
+				<li class="taxi"><a href="">카카오택시</a></li>
+				<li class="game"><a href="">카카오게임</a></li>
+				<li class="group"><a href="">카카오그룹</a></li>
+			</ul>
+		</div>
+	</div><!--//wrap-->
+</body>
+</html>
+
+
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>interactive 웹서비스</title>
+		<link rel="stylesheet" href="css/reset.css"/>
+		<link rel="stylesheet" href="css/notosanskr.css"/>
+		<link rel="stylesheet" href="css/all.min.css"/>
+		<style>
+			#wrap {
+				width: 700px;
+				height: 700px;
+				box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				position: fixed;
+				top:50%;
+				left:50%;
+				margin:-350px 0 0 -350px;
+				text-align: center;
+			}
+			#box{
+				width:500px;
+				height: 500px;
+				margin:20px auto;
+				box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				/*포지셔닝 컨텍스트 지정*/
+				position: relative;
+				transition: 1s ease;
+			}
+			.open #box {
+				box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.4);
+			}
+			#wrap h1 {
+				font-family: "Noto Sans KR",sans-serif;
+				font-weight: 900;
+				font-size: 40px;
+				margin: 30px 0;
+			}
+			.door{
+				width:250px;
+				height: 500px;
+				position: absolute;
+				font-size: 350px;
+				line-height: 500px;
+				color:#ffffff;
+				text-shadow: 0 0 14px #000;
+				transition: 1s ease;
+			}
+			#man {
+				background-color: silver;
+				left:0;
+				transform-origin: 0 50%;
+				/*기본값 지정*/
+				/*transform: perspective(1000px) rotateY(0deg);*/
+				transform: perspective(50px) rotateY(0deg);
+			}
+			.open #man{
+				text-shadow: 0 0 14px #ffffff;
+				/*transform: perspective(1000px) rotateY(-130deg);*/
+				transform: perspective(50px) rotateY(0deg) translateX(-250px);
+			}
+			#woman {
+				background-color: gold;
+				right: 0;
+				transform-origin: 100% 50%;
+				/*transform: perspective(1000px) rotateY(0deg);*/
+				transform: perspective(50px) rotateY(0deg);
+			}
+			.open #woman {
+				text-shadow: 0 0 14px #ffffff;
+				/*transform: perspective(1000px) rotateY(130deg);*/
+				transform: perspective(50px) rotateY(0deg) translateX(250px);
+			}
+			#executeBtn{
+				width: 200px;
+				height: 60px;
+				border:none;
+				font-family: "Noto Sans KR",sans-serif;
+				font-weight: 900;
+				font-size: 22px;
+				cursor:pointer;
+				background-color: #69F0AE;
+				transition: .2s ease;
+				color: white;
+				text-shadow: 0 0  2px #424242;
+			}
+			#executeBtn:hover{
+				font-size: 25px;
+				background-color: aqua;
+				box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<h1>문을 여시오!</h1>
+			<div id="box">
+				<div id="man" class="door"><i class="fa fa-male"></i></div>
+				<div id="woman" class="door"><i class="fa fa-female"></i></div>
+			</div><!--//box-->
+            <button id="executeBtn">열고 닫기</button>
+		</div><!--//wrap-->
+	</body>
+	<script src="js/jquery.js"></script>
+	<script>
+		$("#executeBtn").click(function () {
+			$("#box").toggleClass("open");
+		})
+	</script>
+</html>

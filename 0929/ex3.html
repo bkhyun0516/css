@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습문제 3</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/all.min.css"/>
+    <style>
+        html {
+            height: 100%;
+        }
+        body{
+            height: 100%;
+        }
+        #popup {
+            positon:relative;
+            height: 100%;
+            background-image: url("img/bg.png");
+            background-position:center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: #FFDE2F;
+            display: none;
+        }
+        #openBtn {
+            border:none;
+            width: 200px;
+            height: 60px;
+            font-size: 20px;
+            position:fixed;
+            left:50%;
+            top:50%;
+            margin:-30px 0 0 -100px;
+            line-height: 60px;
+            background-color: #92D9DF;
+            color: white;
+            outline: none;
+            transition: .2s ease;
+        }
+        #openBtn:hover{
+            background-color: dodgerblue;
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            font-size: 30px;
+        }
+        #openBtn.hide {
+            opacity: 0%;
+        }
+
+    </style>
+</head>
+<body>
+<button id="openBtn" ><i class="fas fa-smile"></i> 여기 클릭</button>
+<div id="popup" class="hide"></div>
+</body>
+<script src="js/jquery.js"></script>
+<script>
+    const $openBtn =$("#openBtn")
+    $openBtn.click(function () {
+        $openBtn.toggleClass("hide");
+        $("#popup").fadeToggle();
+    });
+
+</script>
+</html>
